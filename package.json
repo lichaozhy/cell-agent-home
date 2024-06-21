@@ -1,0 +1,17 @@
+{
+  "name": "cell-agent-home",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "author": "ChaosLee",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.2.3"
+  }
+}
