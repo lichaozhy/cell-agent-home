@@ -41,26 +41,25 @@ us into the “Agent for Science” era.
 </v-tabs>
 [[TABS]]
 
-CellAgent consistently adapts appropriate tools and hyperparameters to achieve
-superior outcomes
+### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes
 
-<v-container class="mb-6 py-0 px-8">
+<v-container class="my-16 py-0 px-8">
   <v-row>
     <v-col>
       <v-card
         title="Uniform Bar Exam"
         variant="plain"
       >
-        <v-card-text class="py-0 mt-4">
-          <v-container class="px-0 py-2">
+        <v-card-text class="py-0">
+          <v-container class="pa-0">
             <v-row no-gutters>
               <v-col>
-                <h1 style="font-size:84px">25th</h1>
-                <p>CellAgent</p>
+                <div style="font-size:84px">25th</div>
+                <div>CellAgent</div>
               </v-col>
               <v-col class="text-light-green">
-                <h1 style="font-size:84px">90th</h1>
-                <p>GPT-4</p>
+                <div style="font-size:84px">90th</div>
+                <div>GPT-4</div>
               </v-col>
             </v-row>
           </v-container>
@@ -72,16 +71,16 @@ superior outcomes
         title="Biology Olympiad"
         variant="plain"
       >
-        <v-card-text class="py-0 mt-4">
-          <v-container class="px-0 py-2">
+        <v-card-text class="py-0">
+          <v-container class="pa-0">
             <v-row no-gutters>
               <v-col>
-                <h1 style="font-size:84px">33rd</h1>
-                <p>CellAgent</p>
+                <div style="font-size:84px">33rd</div>
+                <div>CellAgent</div>
               </v-col>
               <v-col class="text-light-green">
-                <h1 style="font-size:84px">99th</h1>
-                <p>GPT-4</p>
+                <div style="font-size:84px">99th</div>
+                <div>GPT-4</div>
               </v-col>
             </v-row>
           </v-container>
@@ -91,10 +90,75 @@ superior outcomes
   </v-row>
 </v-container>
 
-CellAgent surpasses GPT-4 and GPT-3.5 in its advanced automation capabilities on
-single-cell analysis.
+### CellAgent surpasses GPT-4 and GPT-3.5 in its advanced automation capabilities on single-cell analysis.
 
-[[EXAMPLES]]
+<v-container class="my-8 py-0 px-8">
+  <v-row>
+    <v-col cols="6">
+      <h3 class="mb-2">GPT-4.0</h3>
+      <v-card
+        border="surface sm opacity-100"
+        title="Input"
+        variant="text"
+        class="rounded-0"
+      >
+        <v-card-text>
+          Andrew is free from 11 am to 3 pm, Joanne is free from noon to 2 pm
+          and then 3:30 pm to 5 pm. Hannah is available at noon for half an
+          hour, and then 4 pm to 6 pm. What are some options for start times
+          for a 30 minute meeting for Andrew, Hannah, and Joanne?
+        </v-card-text>
+      </v-card>
+      <v-card
+        border="surface sm opacity-100"
+        title="Output"
+        variant="text"
+        class="rounded-0 border-t-0"
+      >
+        <v-card-text style="text-wrap-mode:wrap;white-space:pre-wrap;white-space-collapse:preserves">
+          <span class="bg-grey-lighten-2">
+Here is a list of their availability:<br>
+- Andrew: 11 am to 3 pm<br>
+- Joanne: noon to 2 pm, and 3:30 pm to 5 pm<br>
+- Hannah: noon to 12:30 pm, and 4 pm to 6 pm<br><br>
+Based on their availability, there is a 30-minute window where all three of them are available, which is from 4 pm to 4:30 pm. So, the meeting can be scheduled at 4 pm.
+          </span>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col>
+      <h3 class="mb-2 text-success">CellAgent</h3>
+      <v-card
+        border="success sm opacity-100"
+        title="Input"
+        variant="text"
+        class="rounded-0 text-success"
+      >
+        <v-card-text>
+          Andrew is free from 11 am to 3 pm, Joanne is free from noon to 2 pm
+          and then 3:30 pm to 5 pm. Hannah is available at noon for half an
+          hour, and then 4 pm to 6 pm. What are some options for start times
+          for a 30 minute meeting for Andrew, Hannah, and Joanne?
+        </v-card-text>
+      </v-card>
+      <v-card
+        border="success sm opacity-100"
+        title="Output"
+        variant="text"
+        class="rounded-0 border-t-0 text-success"
+      >
+        <v-card-text>
+          <span class="bg-light-green-lighten-2">
+Andrew: 11 am - 3 pm<br>
+Joanne: 12 pm - 2 pm, 3:30 pm - 5 pm<br>
+Hannah: 12 pm - 12:30 pm, 4 pm - 6 pm<br><br>
+Common availability for a 30-minute meeting: 12 pm - 12:30 pm
+          </span>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
+</v-container>
 
 CellAgent can streamline your single-cell data analysis workflow, ensuring
 high-quality results with minimal effort. Our intuitive interface and robust
