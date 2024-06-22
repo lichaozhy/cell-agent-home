@@ -21,11 +21,8 @@ hero:
   <iframe
     src="//player.bilibili.com/player.html?isOutside=true&aid=112613522411165&bvid=BV1dVGoeCEQ4&cid=500001581492325&p=1"
     scrolling="no"
-    border="0"
-    frameborder="no"
-    framespacing="0"
     allowfullscreen="true"
-    class="h-100 w-100"
+    class="h-100 w-100 border-0"
   ></iframe>
 </v-responsive>
 
@@ -47,7 +44,52 @@ us into the “Agent for Science” era.
 CellAgent consistently adapts appropriate tools and hyperparameters to achieve
 superior outcomes
 
-[[INDEXIES]]
+<v-container class="mb-6 py-0 px-8">
+  <v-row>
+    <v-col>
+      <v-card
+        title="Uniform Bar Exam"
+        variant="plain"
+      >
+        <v-card-text class="py-0 mt-4">
+          <v-container class="px-0 py-2">
+            <v-row no-gutters>
+              <v-col>
+                <h1 style="font-size:84px">25th</h1>
+                <p>CellAgent</p>
+              </v-col>
+              <v-col class="text-light-green">
+                <h1 style="font-size:84px">90th</h1>
+                <p>GPT-4</p>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col>
+      <v-card
+        title="Biology Olympiad"
+        variant="plain"
+      >
+        <v-card-text class="py-0 mt-4">
+          <v-container class="px-0 py-2">
+            <v-row no-gutters>
+              <v-col>
+                <h1 style="font-size:84px">33rd</h1>
+                <p>CellAgent</p>
+              </v-col>
+              <v-col class="text-light-green">
+                <h1 style="font-size:84px">99th</h1>
+                <p>GPT-4</p>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
+</v-container>
 
 CellAgent surpasses GPT-4 and GPT-3.5 in its advanced automation capabilities on
 single-cell analysis.
@@ -61,7 +103,10 @@ level of expertise. With CellAgent website, you can:
 
 <div class="mx-16 px-16">
 
-* **Upload and Analyze:** Click to upload your single-cell data file, then chat with CellAgent, providing necessary escriptions. The more detailed your input, the better the results. CellAgent will finish executing through each step, displaying the results as it goes.
+* **Upload and Analyze:** Click to upload your single-cell data file, then chat
+with CellAgent, providing necessary descriptions. The more detailed your input,
+the better the results. CellAgent will finish executing through each step,
+displaying the results as it goes.
 
 * **Explore with Demos:** Click on our provided examples to quickly experience the impressive capabilities of CellAgent.
 * **Interactive Requests:** Through ongoing dialogue, you can continuously submit new requests, then CellAgent will try to meet your needs at all times
