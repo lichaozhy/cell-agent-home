@@ -114,11 +114,21 @@ us into the “Agent for Science” era.
       >
         <v-card-text style="text-wrap-mode:wrap;white-space:pre-wrap;white-space-collapse:preserves">
           <span class="bg-grey-lighten-2">
-Here is a list of their availability:<br>
-- Andrew: 11 am to 3 pm<br>
-- Joanne: noon to 2 pm, and 3:30 pm to 5 pm<br>
-- Hannah: noon to 12:30 pm, and 4 pm to 6 pm<br><br>
-Based on their availability, there is a 30-minute window where all three of them are available, which is from 4 pm to 4:30 pm. So, the meeting can be scheduled at 4 pm.
+Sure, I can help with that. We'll use the Scanpy library in Python for single-cell RNA-seq data analysis. Here's the general workflow we'll follow:<br>
+1. Load the dataset.<br>
+2. Preprocess the data (filtering, normalization, etc.).<br>
+3. Perform clustering.<br>
+4. Annotate the cell types.<br>
+Let's start by providing the complete Python code for this task:<br>
+
+<code><pre>
+...
+cell_types = pd.DataFrame(index=adata.obs_names)
+for cell_type, genes in marker_genes.items():
+    adata.obs[cell_type] = adata[:, genes].X.mean(1)
+...
+</code></pre>
+
           </span>
         </v-card-text>
       </v-card>
@@ -132,10 +142,7 @@ Based on their availability, there is a 30-minute window where all three of them
         class="rounded-0 text-success"
       >
         <v-card-text>
-          Andrew is free from 11 am to 3 pm, Joanne is free from noon to 2 pm
-          and then 3:30 pm to 5 pm. Hannah is available at noon for half an
-          hour, and then 4 pm to 6 pm. What are some options for start times
-          for a 30 minute meeting for Andrew, Hannah, and Joanne?
+          This is a classic single-cell data analysis dataset, consisting of 3k human peripheral blood mononuclear cells from a healthy donor. Please perform the cell type annotation task.
         </v-card-text>
       </v-card>
       <v-card
@@ -180,13 +187,13 @@ displaying the results as it goes.
 
 CellAgent is publicly accessible on BiorXiv. View CellAgent research.
 
-### Meet the team
+<!-- ### Meet the team
 
 <div class="mx-16 px-16">
 
 - **Prof.** [Jiajie Peng](https://github.com) Northwestern Polytechnical University
 - **Prof.** [Jianye Hao](https://github.com) Tianjin University
-</div>
+</div> -->
 
 ### Contact us
 
