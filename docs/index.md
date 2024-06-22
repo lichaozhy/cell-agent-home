@@ -27,13 +27,28 @@ features:
 
 另一些内容
 
-<iframe
-  src="//player.bilibili.com/player.html?isOutside=true&aid=1255777473&bvid=BV15J4m1u7qv&cid=1589635257&p=1"
-  scrolling="no" 
-  border="0" 
-  frameborder="no" 
-  framespacing="0" 
-  allowfullscreen="true"
-  width="800"
-  height="600"
-></iframe>
+<v-tabs
+  bg-color="indigo-darken-2"
+  fixed-tabs
+>
+  <v-tab text="Option"></v-tab>
+
+  <v-tab text="Another Option"></v-tab>
+</v-tabs>
+
+<v-carousel>
+  <v-carousel-item
+    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    cover
+  ></v-carousel-item>
+
+  <v-carousel-item
+    src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
+    cover
+  ></v-carousel-item>
+
+  <v-carousel-item
+    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+    cover
+  ></v-carousel-item>
+</v-carousel>

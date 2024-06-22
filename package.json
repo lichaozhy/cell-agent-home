@@ -12,6 +12,10 @@
   "author": "ChaosLee",
   "license": "MIT",
   "devDependencies": {
+    "@mdi/js": "^7.4.47",
     "vitepress": "^1.2.3"
+  },
+  "dependencies": {
+    "vuetify": "^3.6.10"
   }
 }
