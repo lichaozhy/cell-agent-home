@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Try on CellAgent 👉
-      link: /markdown-examples
+      link: http://cell.agent4science.cn/
     - theme: alt
       text: View CellAgent research >
-      link: /api-examples
+      link: https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1
 ---
 <v-responsive
   :aspect-ratio="16 / 9"
@@ -103,10 +103,7 @@ us into the “Agent for Science” era.
         class="rounded-0"
       >
         <v-card-text>
-          Andrew is free from 11 am to 3 pm, Joanne is free from noon to 2 pm
-          and then 3:30 pm to 5 pm. Hannah is available at noon for half an
-          hour, and then 4 pm to 6 pm. What are some options for start times
-          for a 30 minute meeting for Andrew, Hannah, and Joanne?
+          This is a classic single-cell data analysis dataset, consisting of 3k human peripheral blood mononuclear cells from a healthy donor. Please perform the cell type annotation task and provide the complete Python code.
         </v-card-text>
       </v-card>
       <v-card
