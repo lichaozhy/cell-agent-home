@@ -136,3 +136,10 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+div#app div.VPHome div.VPHero div.container div.main p.text {
+  max-width: initial !important;
+  font-size: 32px;
+  line-height: 32px;
+  margin-top: 0.5em;
+}

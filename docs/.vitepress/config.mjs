@@ -2,13 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Cell Agent",
-  description: "A VitePress Site",
+  title: " ",
+  // description: "A VitePress Site",
   themeConfig: {
+    logo: 'https://vitepress.dev/vitepress-logo-mini.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Research', link: 'https://github.com' },
+      { text: 'CellAgent', link: 'https:/github.com' }
     ],
 
     sidebar: [
@@ -22,7 +23,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/lichaozhy/cell-agent-home' }
     ]
   },
   vite: {
