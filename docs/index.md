@@ -109,19 +109,19 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
   <v-row>
     <v-col>
       <v-card
-        title="Uniform Bar Exam"
+        title="Task Completion Rate"
         variant="plain"
       >
         <v-card-text class="py-0">
           <v-container class="pa-0">
             <v-row no-gutters>
               <v-col>
-                <div style="font-size:84px">25th</div>
-                <div>CellAgent</div>
+                <div style="font-size:84px">47%</div>
+                <div>GPT-4</div>
               </v-col>
               <v-col class="text-light-green">
-                <div style="font-size:84px">90th</div>
-                <div>GPT-4</div>
+                <div style="font-size:84px">92%</div>
+                <div>CellAgent</div>
               </v-col>
             </v-row>
           </v-container>
@@ -130,19 +130,19 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
     </v-col>
     <v-col>
       <v-card
-        title="Biology Olympiad"
+        title="Task Performance"
         variant="plain"
       >
         <v-card-text class="py-0">
           <v-container class="pa-0">
             <v-row no-gutters>
-              <v-col>
-                <div style="font-size:84px">33rd</div>
+              <!-- <v-col>
+                <div style="font-size:84px"></div>
                 <div>CellAgent</div>
-              </v-col>
+              </v-col> -->
               <v-col class="text-light-green">
-                <div style="font-size:84px">99th</div>
-                <div>GPT-4</div>
+                <div style="font-size:84px">107.23%</div>
+                <div>CellAgent</div>
               </v-col>
             </v-row>
           </v-container>
@@ -152,7 +152,7 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
   </v-row>
 </v-container>
 
-### CellAgent surpasses GPT-4 and GPT-3.5 in its advanced automation capabilities on single-cell analysis.
+### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
 
 <v-container class="my-8 py-0 px-8">
   <v-row>
