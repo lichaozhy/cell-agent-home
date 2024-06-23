@@ -15,6 +15,17 @@
             <slot name="input">Input</slot>
           </v-card-text>
         </v-card>
+        <v-col>
+        <v-card
+          border="surface-variant sm opacity-100"
+          title="Thought"
+          variant="text"
+          class="rounded-0"
+        >
+          <v-card-text>
+            <slot name="thought">Thought</slot>
+          </v-card-text>
+        </v-card>
         <v-card
           border="surface-variant sm opacity-100"
           title="Output"
