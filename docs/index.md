@@ -103,7 +103,7 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
   </v-tabs-window-item>
 </v-tabs-window>
 
-### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes
+### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
 <v-container class="my-16 py-0 px-8">
   <v-row>
@@ -130,7 +130,7 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
     </v-col>
     <v-col>
       <v-card
-        title="Task Performance"
+        title="Task Performance**"
         variant="plain"
       >
         <v-card-text class="py-0">
@@ -141,7 +141,7 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
                 <div>CellAgent</div>
               </v-col> -->
               <v-col class="text-light-green">
-                <div style="font-size:84px">107.23%</div>
+                <div style="font-size:84px">107.23%*</div>
                 <div>CellAgent</div>
               </v-col>
             </v-row>
@@ -151,6 +151,9 @@ After an initial analysis, 6 steps are required to complete your request:<br>1.Q
     </v-col>
   </v-row>
 </v-container>
+
+*In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.<br>
+**The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.<br><br>
 
 ### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
 
@@ -191,22 +194,6 @@ for cell_type, genes in marker_genes.items():
 ...
 ```
 </div>
-<style>
-.gray-box {
-            font-weight: bold;
-            border: 2px solid #4f4f4f;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .green-box {
-            font-weight: bold;
-            border: 2px solid #4CAF50;
-            background-color: #e8f5e9;
-            padding: 10px;
-            border-radius: 5px;
-        }
-</style>
 <div class="gray-box">
     GPT-4 provided code for a basic solution.
 </div>
