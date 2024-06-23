@@ -55,7 +55,7 @@ us into the “Agent for Science” era.
         your input
       </template>
       <template v-slot:output>
-        your output
+After an initial analysis, 6 steps are required to complete your request:<br>1.Quality Control<br>2.Normalization<br>3.Identification of Highly Variable Genes<br>4.Dimensionality Reduction<br>5.Clustering<br>6.Cell Type Annotation<br>
       </template>
     </demo-frame>
   </v-tabs-window-item>
@@ -234,13 +234,7 @@ for cell_type, genes in marker_genes.items():
       >
         <v-card-text>
           <span class="bg-light-green-lighten-2">
-[Planner]<br>
-After an initial analysis, 6 steps are required to complete your request:<br>1.Quality Control<br>2.Normalization<br>3.Identification of Highly Variable Genes<br>4.Dimensionality Reduction<br>5.Clustering<br>6.Cell Type Annotation<br>
 CellAgent is starting the process. Please wait for a while.<br><br>
-[Executor for Step 1]<br>
-...<br>
-[Executor for Step 6]<br>
-CellAgent has completed the step of 6: Cell Type Annotation.<br>During the process, CellAgent generated a total of 3 different solutions.<br>
 <div>
 
 ```python
@@ -269,13 +263,13 @@ adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'],
 ```
 </div>
 After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-<div>
+<!-- <div>
 
 ```python
 gpt = GPTRole("Annotation Evaluator", "", "gpt-4", 0, verbose=0)
 result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_list, current_iter_info, gpt, cfg, obs_cluster='leiden')
 ```
-</div>
+</div> -->
 <img src="image.png" alt="annotation result" style="max-width:100%;height:auto;">
           </span>
         </v-card-text>
