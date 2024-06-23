@@ -100,11 +100,36 @@ After an initial analysis, 6 steps are required to complete your request:
       <template v-slot:description>
         During each step, CellAgent can automatically generate and execute code, providing the resulting plots and data.
       </template>
-      <template v-slot:input>
-        your input
+      <template v-slot:thought>
+Data Format: AnnData object with n_obs × n_vars = 2638 × 32738<br>
+    obs: 'n_genes_by_counts', 'log1p_n_genes_by_counts', 'total_counts', 'log1p_total_counts', 'pct_counts_in_top_50_genes', 'pct_counts_in_top_100_genes', 'pct_counts_in_top_200_genes', 'pct_counts_in_top_500_genes', 'total_counts_mt', 'log1p_total_counts_mt', 'pct_counts_mt'<br>
+    var: 'gene_ids', 'n_cells_by_counts', 'mean_counts', 'log1p_mean_counts', 'pct_dropout_by_counts', 'total_counts', 'log1p_total_counts', 'mt', 'highly_variable', 'means', 'dispersions', 'dispersions_norm'<br>
+    uns: 'log1p', 'hvg'<br>
+    layers: 'counts'<br>
+The code has been ran: [history code]<br>
+The current step is: Dimensionality Reduction. Generate code to complete the current step.
       </template>
       <template v-slot:output>
-        your output
+To perform dimensionality reduction, we will use Principal Component Analysis (PCA) to reduce the dimensionality of the dataset. This step is crucial for visualizing the data and for subsequent steps like clustering and trajectory inference. Here is the code to perform PCA and visualize the results:<br>
+<div>
+
+```python
+# Perform PCA
+sc.tl.pca(adata, svd_solver='arpack')
+
+# Plot the explained variance ratio to understand how much variance is captured by each principal component
+sc.pl.pca_variance_ratio(adata, log=True, show=True, save=False)
+plt.savefig(f"{cfg['img_save_dir']}/pca_variance_ratio.png")
+
+# Plot the PCA result
+sc.pl.pca(adata, color='total_counts', show=True, save=False)
+plt.savefig(f"{cfg['img_save_dir']}/pca_result.png")
+
+# Print description of the figures
+print("The first figure shows the explained variance ratio of the principal components. The second figure shows the PCA result, with cells colored by their total counts.")
+```
+</div>
+![](image_2.png)
       </template>
     </demo-frame>
   </v-tabs-window-item>
