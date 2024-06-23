@@ -136,7 +136,7 @@ After an initial analysis, 6 steps are required to complete your request:
   </v-tabs-window-item>
 </v-tabs-window>
 
-### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes
+### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
 <v-container class="my-16 py-0 px-8">
   <v-row>
@@ -163,7 +163,7 @@ After an initial analysis, 6 steps are required to complete your request:
     </v-col>
     <v-col>
       <v-card
-        title="Task Performance"
+        title="Task Performance**"
         variant="plain"
       >
         <v-card-text class="py-0">
@@ -174,7 +174,7 @@ After an initial analysis, 6 steps are required to complete your request:
                 <div>CellAgent</div>
               </v-col> -->
               <v-col class="text-light-green">
-                <div style="font-size:84px">107.23%</div>
+                <div style="font-size:84px">107.23%*</div>
                 <div>CellAgent</div>
               </v-col>
             </v-row>
@@ -184,6 +184,10 @@ After an initial analysis, 6 steps are required to complete your request:
     </v-col>
   </v-row>
 </v-container>
+
+\* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.
+
+** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.
 
 ### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
 
