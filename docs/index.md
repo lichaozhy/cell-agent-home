@@ -190,6 +190,7 @@ for cell_type, genes in marker_genes.items():
     adata.obs[cell_type] = adata[:, genes].X.mean(1)
 ...
 ```
+</div>
 <style>
 .gray-box {
             font-weight: bold;
@@ -206,10 +207,9 @@ for cell_type, genes in marker_genes.items():
             border-radius: 5px;
         }
 </style>
-</div>
-<div class="gray-box">
+<!-- <div class="gray-box">
     GPT-4 provided code for a basic solution.
-</div>
+</div> -->
           </span>
         </v-card-text>
       </v-card>
@@ -276,7 +276,7 @@ gpt = GPTRole("Annotation Evaluator", "", "gpt-4", 0, verbose=0)
 result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_list, current_iter_info, gpt, cfg, obs_cluster='leiden')
 ```
 </div>
-<img></img>
+<img src="image.png" alt="annotation result" style="max-width:100%;height:auto;">
           </span>
         </v-card-text>
       </v-card>
