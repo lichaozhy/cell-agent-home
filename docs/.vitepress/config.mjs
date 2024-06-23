@@ -5,8 +5,8 @@ export default defineConfig({
   title: " ",
   // description: "A VitePress Site",
   themeConfig: {
-    logo: 'https://vitepress.dev/vitepress-logo-mini.svg',
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/example.jpg',
     nav: [
       { text: 'Research', link: 'https://github.com' },
       { text: 'CellAgent', link: 'https:/github.com' }
