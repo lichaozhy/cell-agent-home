@@ -215,10 +215,44 @@ for cell_type, genes in marker_genes.items():
       >
         <v-card-text>
           <span class="bg-light-green-lighten-2">
-Andrew: 11 am - 3 pm<br>
-Joanne: 12 pm - 2 pm, 3:30 pm - 5 pm<br>
-Hannah: 12 pm - 12:30 pm, 4 pm - 6 pm<br><br>
-Common availability for a 30-minute meeting: 12 pm - 12:30 pm
+[Planner]<br>
+After an initial analysis, 6 steps are required to complete your request:<br>1.Quality Control<br>2.Normalization<br>3.Identification of Highly Variable Genes<br>4.Dimensionality Reduction<br>5.Clustering<br>6.Cell Type Annotation<br>
+CellAgent is starting the process. Please wait for a while.<br>
+[Step 1]<br>
+...<br>
+[Step 6]<br>
+CellAgent has completed the step of 6: Cell Type Annotation.<br>During the process, CellAgent generated a total of 3 different solutions.<br>
+<div>
+```Executor
+# Cell Type Annotation using AnnotatorCellmarkerACT
+annotator = AnnotatorCellmarkerACT()
+adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_cluster='leiden')
+...
+```
+</div>
+<div>
+```Executor
+# To optimize the cell type annotation step, let's use the `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
+annotator = AnnotatorCelltypist()
+adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
+...
+```
+</div>
+<div>
+```Executor
+# To further optimize the cell type annotation step, we can try using the `AnnotatorSCType` tool.
+annotator = AnnotatorSCType()
+adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'], tissue_type='Immune system')
+...
+```
+</div>
+<div>
+```Evaluator
+gpt = GPTRole("Annotation Evaluator", "", "gpt-4", 0, verbose=0)
+result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_list, current_iter_info, gpt, cfg, obs_cluster='leiden')
+```
+</div>
+After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type'].<br>![](image.png)
           </span>
         </v-card-text>
       </v-card>
