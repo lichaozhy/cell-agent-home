@@ -21,6 +21,8 @@ const vuetify = createVuetify({
   },
 })
 
+import DemoFrame from './components/DemoFrame.vue';
+
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
@@ -32,5 +34,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // ...
     app.use(vuetify)
+    app.component('DemoFrame', DemoFrame)
   }
 }

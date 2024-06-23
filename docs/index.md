@@ -14,9 +14,16 @@ hero:
       text: View CellAgent research >
       link: https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1
 ---
+
+<script setup>
+import { ref } from 'vue'
+
+const tab = ref('0')
+</script>
+
 <v-responsive
   :aspect-ratio="16 / 9"
-  class="border px-md-16 px-sm-0 py-0"
+  class="border-0 px-md-16 px-sm-0 py-0"
 >
   <iframe
     src="//player.bilibili.com/player.html?isOutside=true&aid=112613522411165&bvid=BV1dVGoeCEQ4&cid=500001581492325&p=1"
@@ -31,15 +38,70 @@ CellAgent conducts step-by-step execution and iterative optimization for various
 tasks, substantially reducing the workload for science data analyses, bringing
 us into the “Agent for Science” era.
 
-<v-tabs
-  bg-color="indigo-darken-2"
-  fixed-tabs
->
-  <v-tab text="Option"></v-tab>
-
-  <v-tab text="Another Option"></v-tab>
+<v-tabs fixed-tabs v-model="tab">
+  <v-tab text="Task decomposition" value="0"></v-tab>
+  <v-tab text="Execution for sub-step" value="1"></v-tab>
+  <v-tab text="Self-optimization" value="2"></v-tab>
+  <v-tab text="Handle user feedback" value="3"></v-tab>
 </v-tabs>
-[[TABS]]
+
+<v-tabs-window v-model="tab">
+  <v-tabs-window-item value="0">
+    <demo-frame>
+      <template v-slot:description>
+        For complex scRNA-seq data analysis tasks, CellAgent can emulate the process of a human expert by first breaking down the task into sub-steps and then executing them sequentially.
+      </template>
+      <template v-slot:input>
+        your input
+      </template>
+      <template v-slot:output>
+        your output
+      </template>
+    </demo-frame>
+  </v-tabs-window-item>
+
+  <v-tabs-window-item value="1">
+    <demo-frame>
+      <template v-slot:description>
+        During each step, CellAgent can automatically generate and execute code, providing the resulting plots and data.
+      </template>
+      <template v-slot:input>
+        your input
+      </template>
+      <template v-slot:output>
+        your output
+      </template>
+    </demo-frame>
+  </v-tabs-window-item>
+
+  <v-tabs-window-item value="2">
+    <demo-frame>
+      <template v-slot:description>
+        CellAgent can automatically optimize the generated solutions and ultimately select the best one to present.
+      </template>
+      <template v-slot:input>
+        your input
+      </template>
+      <template v-slot:output>
+        your output
+      </template>
+    </demo-frame>
+  </v-tabs-window-item>
+
+  <v-tabs-window-item value="3">
+    <demo-frame>
+      <template v-slot:description>
+        CellAgent can understand your natural language requirements and, at any point during the execution, respond to your natural language feedback by generating new code to meet your needs.
+      </template>
+      <template v-slot:input>
+        your input
+      </template>
+      <template v-slot:output>
+        your output
+      </template>
+    </demo-frame>
+  </v-tabs-window-item>
+</v-tabs-window>
 
 ### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes
 
@@ -97,7 +159,7 @@ us into the “Agent for Science” era.
     <v-col cols="6">
       <h3 class="mb-2">GPT-4.0</h3>
       <v-card
-        border="surface sm opacity-100"
+        border="surface-variant sm opacity-100"
         title="Input"
         variant="text"
         class="rounded-0"
@@ -107,7 +169,7 @@ us into the “Agent for Science” era.
         </v-card-text>
       </v-card>
       <v-card
-        border="surface sm opacity-100"
+        border="surface-variant sm opacity-100"
         title="Output"
         variant="text"
         class="rounded-0 border-t-0"
