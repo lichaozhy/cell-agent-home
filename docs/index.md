@@ -255,7 +255,8 @@ for cell_type, genes in marker_genes.items():
       >
         <v-card-text>
         <span class="bg-light-green-lighten-2">
-          CellAgent is starting the process. Please wait for a while.<br><br>
+          CellAgent is starting the process. Please wait for a while.<br>
+          ... [the process of task decomposition and the execution of previous steps]<br>
         </span>
 <div>
 
