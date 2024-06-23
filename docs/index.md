@@ -190,6 +190,25 @@ for cell_type, genes in marker_genes.items():
     adata.obs[cell_type] = adata[:, genes].X.mean(1)
 ...
 ```
+<style>
+.gray-box {
+            font-weight: bold;
+            border: 2px solid #4f4f4f;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .green-box {
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+</style>
+</div>
+<div class="gray-box">
+    GPT-4 provided code for a basic solution.
 </div>
           </span>
         </v-card-text>
@@ -217,13 +236,14 @@ for cell_type, genes in marker_genes.items():
           <span class="bg-light-green-lighten-2">
 [Planner]<br>
 After an initial analysis, 6 steps are required to complete your request:<br>1.Quality Control<br>2.Normalization<br>3.Identification of Highly Variable Genes<br>4.Dimensionality Reduction<br>5.Clustering<br>6.Cell Type Annotation<br>
-CellAgent is starting the process. Please wait for a while.<br>
-[Step 1]<br>
+CellAgent is starting the process. Please wait for a while.<br><br>
+[Executor for Step 1]<br>
 ...<br>
-[Step 6]<br>
+[Executor for Step 6]<br>
 CellAgent has completed the step of 6: Cell Type Annotation.<br>During the process, CellAgent generated a total of 3 different solutions.<br>
 <div>
-```Executor
+
+```python
 # Cell Type Annotation using AnnotatorCellmarkerACT
 annotator = AnnotatorCellmarkerACT()
 adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_cluster='leiden')
@@ -231,7 +251,8 @@ adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_clu
 ```
 </div>
 <div>
-```Executor
+
+```python
 # To optimize the cell type annotation step, let's use the `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
 annotator = AnnotatorCelltypist()
 adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
@@ -239,20 +260,23 @@ adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster=
 ```
 </div>
 <div>
-```Executor
+
+```python
 # To further optimize the cell type annotation step, we can try using the `AnnotatorSCType` tool.
 annotator = AnnotatorSCType()
 adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'], tissue_type='Immune system')
 ...
 ```
 </div>
+After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
 <div>
-```Evaluator
+
+```python
 gpt = GPTRole("Annotation Evaluator", "", "gpt-4", 0, verbose=0)
 result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_list, current_iter_info, gpt, cfg, obs_cluster='leiden')
 ```
 </div>
-After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type'].<br>![](image.png)
+<img></img>
           </span>
         </v-card-text>
       </v-card>
