@@ -76,18 +76,20 @@ us into the “Agent for Science” era.
         For complex scRNA-seq data analysis tasks, CellAgent can emulate the process of a human expert by first breaking down the task into sub-steps and then executing them sequentially.
       </template>
       <template v-slot:input>
-        your input
+        This is a classic single-cell data analysis dataset, consisting of 3k human peripheral blood mononuclear cells from a healthy donor. Please perform the cell type annotation task.
       </template>
       <template v-slot:output>
 After an initial analysis, 6 steps are required to complete your request:
 <div>
 
+```
 1. Quality Control
 2. Normalization
 3. Identification of Highly Variable Genes
 4. Dimensionality Reduction
 5. Clustering
 6. Cell Type Annotation
+```
 </div>
       </template>
     </demo-frame>
