@@ -207,9 +207,9 @@ for cell_type, genes in marker_genes.items():
             border-radius: 5px;
         }
 </style>
-<!-- <div class="gray-box">
+<div class="gray-box">
     GPT-4 provided code for a basic solution.
-</div> -->
+</div>
           </span>
         </v-card-text>
       </v-card>
@@ -271,6 +271,9 @@ result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_
 ```
 </div> -->
 <img src="image.png" alt="annotation result" style="max-width:100%;height:auto;">
+<div class="gray-box">
+   CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
+</div>
           </span>
         </v-card-text>
       </v-card>
@@ -283,7 +286,7 @@ high-quality results with minimal effort. Our intuitive interface and robust
 algorithms make it easy to process and interpret your data, regardless of your
 level of expertise. With CellAgent website, you can:
 
-<div class="mx-16 px-16">
+<div class="mx-8 px-8">
 
 * **Upload and Analyze:** Click to upload your single-cell data file, then chat
 with CellAgent, providing necessary descriptions. The more detailed your input,
@@ -299,7 +302,7 @@ displaying the results as it goes.
 
 ### Research
 
-CellAgent is publicly accessible on BiorXiv. View CellAgent research.
+CellAgent is publicly accessible on BiorXiv. 
 
 <!-- ### Meet the team
 
@@ -322,6 +325,6 @@ the problem. Thank you.
 We are excited to see the potential of CellAgent to greatly enhance productivity,
 foster new discoveries, and deepen our understanding of biological systems.
   </div>
-  <v-btn rounded>Try on CellAgent 👉</v-btn>
-  <v-btn variant="plain">View CellAgent research ></v-btn>
+  <v-btn rounded href="http://cell.agent4science.cn/">Try on CellAgent 👉</v-btn>
+  <v-btn variant="plain" href="https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1" target="_blank">View CellAgent research ></v-btn>
 </v-sheet>
