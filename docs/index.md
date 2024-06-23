@@ -16,9 +16,23 @@ hero:
 ---
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const tab = ref('0')
+const isCN = ref(false)
+
+onMounted(async function assertInCN() {
+  try {
+    const response = await fetch('//ipinfo.io/json');
+    const address = await response.json();
+
+    isCN.value = address.country === 'CN';
+  } catch {
+    isCN.value = false;
+  }
+
+  console.log(isCN.value)
+})
 </script>
 
 <v-responsive
@@ -26,11 +40,21 @@ const tab = ref('0')
   class="border-0 px-md-16 px-sm-0 py-0"
 >
   <iframe
+    v-if="isCN"
     src="//player.bilibili.com/player.html?isOutside=true&aid=112613522411165&bvid=BV1dVGoeCEQ4&cid=500001581492325&p=1"
     scrolling="no"
     allowfullscreen="true"
     class="h-100 w-100 border-0"
   ></iframe>
+  <iframe
+    v-else
+    class="h-100 w-100 border-0"
+    src="https://www.youtube.com/embed/7a4M3ymp5ng?si=Hp-jAv9KkYHy-4-w"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    ></iframe>
 </v-responsive>
 
 By constructing and coordinating several LLM-driven biological expert roles,
