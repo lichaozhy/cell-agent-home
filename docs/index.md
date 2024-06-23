@@ -55,7 +55,16 @@ us into the “Agent for Science” era.
         your input
       </template>
       <template v-slot:output>
-After an initial analysis, 6 steps are required to complete your request:<br>1.Quality Control<br>2.Normalization<br>3.Identification of Highly Variable Genes<br>4.Dimensionality Reduction<br>5.Clustering<br>6.Cell Type Annotation<br>
+After an initial analysis, 6 steps are required to complete your request:
+<div>
+
+1. Quality Control
+2. Normalization
+3. Identification of Highly Variable Genes
+4. Dimensionality Reduction
+5. Clustering
+6. Cell Type Annotation
+</div>
       </template>
     </demo-frame>
   </v-tabs-window-item>
@@ -191,30 +200,14 @@ for cell_type, genes in marker_genes.items():
 ...
 ```
 </div>
-<style>
-.gray-box {
-            font-weight: bold;
-            border: 2px solid #4f4f4f;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .green-box {
-            font-weight: bold;
-            border: 2px solid #4CAF50;
-            background-color: #e8f5e9;
-            padding: 10px;
-            border-radius: 5px;
-        }
-</style>
-<div class="gray-box">
+<div class="bg-grey-lighten-2">
     GPT-4 provided code for a basic solution.
 </div>
           </span>
         </v-card-text>
       </v-card>
     </v-col>
-    <v-col>
+    <v-col cols="6">
       <h3 class="mb-2 text-success">CellAgent</h3>
       <v-card
         border="success sm opacity-100"
@@ -233,8 +226,9 @@ for cell_type, genes in marker_genes.items():
         class="rounded-0 border-t-0 text-success"
       >
         <v-card-text>
-          <span class="bg-light-green-lighten-2">
-CellAgent is starting the process. Please wait for a while.<br><br>
+        <span class="bg-light-green-lighten-2">
+          CellAgent is starting the process. Please wait for a while.<br><br>
+        </span>
 <div>
 
 ```python
@@ -243,37 +237,29 @@ annotator = AnnotatorCellmarkerACT()
 adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_cluster='leiden')
 ...
 ```
-</div>
-<div>
 
 ```python
-# To optimize the cell type annotation step, let's use the `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
+# To optimize the cell type annotation step, let's use the
+# `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model,
+# which is suitable for immune sub-populations.
 annotator = AnnotatorCelltypist()
 adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
 ...
 ```
-</div>
-<div>
 
 ```python
-# To further optimize the cell type annotation step, we can try using the `AnnotatorSCType` tool.
+# To further optimize the cell type annotation step, we can try
+# using the `AnnotatorSCType` tool.
 annotator = AnnotatorSCType()
 adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'], tissue_type='Immune system')
 ...
 ```
-</div>
-After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-<!-- <div>
 
-```python
-gpt = GPTRole("Annotation Evaluator", "", "gpt-4", 0, verbose=0)
-result, max_iter, inner_info_list, adata = utils.annotation_evaluate(inner_info_list, current_iter_info, gpt, cfg, obs_cluster='leiden')
-```
-</div> -->
-<img src="image.png" alt="annotation result" style="max-width:100%;height:auto;">
-<div class="gray-box">
-   CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
+After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
+![An image](/example.jpg)
 </div>
+          <span class="bg-light-green-lighten-2">
+              CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
           </span>
         </v-card-text>
       </v-card>
