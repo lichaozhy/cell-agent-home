@@ -139,11 +139,29 @@ print("The first figure shows the explained variance ratio of the principal comp
       <template v-slot:description>
         CellAgent can automatically optimize the generated solutions and ultimately select the best one to present.
       </template>
-      <template v-slot:input>
-        your input
+      <template v-slot:thought>
+The current result doesn't look good enough yet. You can optimize this step by adjusting parameters, changing tools, and so on.
       </template>
       <template v-slot:output>
-        your output
+To optimize the cell type annotation step, we can try using a different tool or adjusting the parameters. Given the options available, let's use the `AnnotatorCelltypist` tool, which is known to work well if it can find a good matching model. We will use the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
+
+Here is the complete code to perform cell type annotation using the `AnnotatorCelltypist` tool:
+
+```python
+# Cell Type Annotation using AnnotatorCelltypist
+from tools.annotator_celltypist import AnnotatorCelltypist
+
+# Initialize the AnnotatorCelltypist tool
+annotator = AnnotatorCelltypist()
+
+# Run the annotation using the "Immune_All_Low.pkl" model
+adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
+
+# Print a message indicating that cell type annotation is complete
+print("Cell type annotation complete. The annotated cell types are stored in adata.obs['cell_typist_label'].")
+```
+
+This code initializes the `AnnotatorCelltypist` tool, runs the annotation process using the "Immune_All_Low.pkl" model, and stores the annotated cell types in the `adata.obs['cell_typist_label']` column. This model is specifically designed for immune sub-populations, which should be suitable for the given dataset of human peripheral blood mononuclear cells.
       </template>
     </demo-frame>
   </v-tabs-window-item>
@@ -154,7 +172,7 @@ print("The first figure shows the explained variance ratio of the principal comp
         CellAgent can understand your natural language requirements and, at any point during the execution, respond to your natural language feedback by generating new code to meet your needs.
       </template>
       <template v-slot:input>
-        your input
+
       </template>
       <template v-slot:output>
         your output
