@@ -307,7 +307,7 @@ Explanation:
 <v-container class="my-8 py-0 px-8">
   <v-row>
     <v-col cols="6">
-      <h3 class="mb-2">GPT-4.0</h3>
+      <h3 class="mb-2">GPT-4</h3>
       <v-card
         border="surface-variant sm opacity-100"
         title="Input"
@@ -397,7 +397,9 @@ adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'],
 ...
 ```
 
+<span class="bg-light-green-lighten-2">
 After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
+</span>
 
 ![An image](/final_annotation.png)
 </div>
