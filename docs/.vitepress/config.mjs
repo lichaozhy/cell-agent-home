@@ -2,11 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: " ",
+  title: "CellAgent",
   // description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/example.jpg',
+    siteTitle: '',
+    logo: '/logo.png',
     nav: [
       { text: 'Research', link: 'https://github.com' },
       { text: 'CellAgent', link: 'https:/github.com' }
