@@ -100,9 +100,9 @@ After an initial analysis, 6 steps are required to complete your request:
       <template v-slot:description>
         During each step, CellAgent can automatically generate and execute code, providing the resulting plots and data.
       </template>
-      <template v-slot:input>
+      <!-- <template v-slot:input>
         your input
-      </template>
+      </template> -->
       <template v-slot:thought>
 <div>
 
