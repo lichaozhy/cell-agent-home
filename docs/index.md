@@ -369,7 +369,7 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
   </v-row>
 </v-container>
 
-<br><br>
+<br><>
 ### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
 <v-container class="my-16 py-0 px-8">
