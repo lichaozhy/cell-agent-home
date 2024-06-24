@@ -57,12 +57,14 @@ onMounted(async function assertInCN() {
     ></iframe>
 </v-responsive>
 
-<br><br>By constructing and coordinating several LLM-driven biological expert roles,
+<div class="my-16"></div>
+
+By constructing and coordinating several LLM-driven biological expert roles,
 CellAgent conducts step-by-step execution and iterative optimization for various
 tasks, substantially reducing the workload for science data analyses, bringing
-us into the “Agent for Science” era.<br>
+us into the “Agent for Science” era.
 
-<v-tabs fixed-tabs v-model="tab">
+<v-tabs class="mt-16" fixed-tabs v-model="tab">
   <v-tab text="Task decomposition" value="0"></v-tab>
   <v-tab text="Execution for sub-step" value="1"></v-tab>
   <v-tab text="Self-optimization" value="2"></v-tab>
@@ -252,10 +254,11 @@ Explanation:
   </v-tabs-window-item>
 </v-tabs-window>
 
+<div class="my-16"></div>
 
-### CellAgent surpasses traditional data analysing approaches in its advanced automation capabilities on single-cell analysis.
+### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
 
-<v-container class="my-8 py-0 px-8">
+<v-container class="mt-8 mb-16 py-0 px-8">
   <v-row>
     <v-col cols="6">
       <h3 class="mb-2">Traditional Method</h3>
@@ -329,14 +332,16 @@ GPT-4 provided code for a basic solution.
         </span>
 <div>
 
-```python
+::: code-group
+
+```python [Basic]
 # Cell Type Annotation using AnnotatorCellmarkerACT
 annotator = AnnotatorCellmarkerACT()
 adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_cluster='leiden')
 ...
 ```
 
-```python
+```python [Optimized]
 # To optimize the cell type annotation step, let's use the
 # `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model,
 # which is suitable for immune sub-populations.
@@ -345,13 +350,15 @@ adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster=
 ...
 ```
 
-```python
+```python [Further Optimized]
 # To further optimize the cell type annotation step, we can try
 # using the `AnnotatorSCType` tool.
 annotator = AnnotatorSCType()
 adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'], tissue_type='Immune system')
 ...
 ```
+
+:::
 
 <span class="bg-light-green-lighten-2">
 After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
@@ -418,8 +425,11 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
   </v-row>
 </v-container>
 
-<p style="color: #555; font-size: 12px;">* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.<br>** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.</p><br><br>
+<div class="text-caption mb-16 ">
 
+\* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.<br>
+** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.
+</div>
 
 CellAgent can streamline your single-cell data analysis workflow, ensuring
 high-quality results with minimal effort. Our intuitive interface and robust

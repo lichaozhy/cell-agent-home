@@ -162,3 +162,7 @@ div#app div.VPHome div.VPHero div.container div.main p.text {
 .v-container .custom-block {
   padding-top: 8px;
 }
+
+.custom-block.tip {
+  background-color: #81C784;
+}
