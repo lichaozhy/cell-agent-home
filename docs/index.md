@@ -415,7 +415,7 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
   </v-row>
 </v-container>
 
-<p style="color: #555; font-size: 12px;">\* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.<br> The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.</p><br><br>
+<p style="color: #555; font-size: 12px;">* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.<br> The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.</p><br><br>
 
 
 CellAgent can streamline your single-cell data analysis workflow, ensuring
