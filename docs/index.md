@@ -235,6 +235,9 @@ Explanation:
 6. **Visualization**: We visualize the UMAP results with the Louvain clustering results.
 7. **Save Data**: We save the AnnData object with the PCA, UMAP, and Louvain clustering results.
 
+![An image](/output1.png)
+![An image](/output2.png)
+
       </template>
     </demo-frame>
   </v-tabs-window-item>
