@@ -117,10 +117,11 @@ The current step is: Dimensionality Reduction. Generate code to complete the cur
 </div>
       </template>
       <template v-slot:output>
-<div>
 To perform dimensionality reduction, we will use Principal Component Analysis (PCA) to reduce the dimensionality of the dataset. This step is crucial for visualizing the data and for subsequent steps like clustering and trajectory inference. Here is the code to perform PCA and visualize the results
+<div>
 
 ```python
+
 # Perform PCA
 sc.tl.pca(adata, svd_solver='arpack')
 
@@ -135,8 +136,8 @@ plt.savefig(f"{cfg['img_save_dir']}/pca_result.png")
 # Print description of the figures
 print("The first figure shows the explained variance ratio of the principal components. The second figure shows the PCA result, with cells colored by their total counts.")
 ```
-![](/image_2.png)
 </div>
+![](/image_2.png)
       </template>
     </demo-frame>
   </v-tabs-window-item>
