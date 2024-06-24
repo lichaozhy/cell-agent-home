@@ -154,3 +154,11 @@ div#app div.VPHome div.VPHero div.container div.main p.text {
   background: rgb(var(--v-theme-surface));
   color: rgba(var(--v-theme-on-surface),var(--v-high-emphasis-opacity)) !important;
 }
+
+.v-container .custom-block-title {
+  display: none;
+}
+
+.v-container .custom-block {
+  padding-top: 8px;
+}

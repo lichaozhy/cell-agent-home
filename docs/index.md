@@ -331,6 +331,7 @@ Explanation:
 3. Perform clustering.<br>
 4. Annotate the cell types.<br>
 Let's start by providing the complete Python code for this task:<br>
+</span>
 <div>
 
 ```python
@@ -341,10 +342,13 @@ for cell_type, genes in marker_genes.items():
 ...
 ```
 </div>
-<div class="bg-grey-lighten-2">
-    GPT-4 provided code for a basic solution.
+
+<div>
+
+::: danger
+GPT-4 provided code for a basic solution.
+:::
 </div>
-          </span>
         </v-card-text>
       </v-card>
     </v-col>
@@ -402,10 +406,11 @@ After being evaluated by GPT-4, the labels for these categories were finally con
 </span>
 
 ![An image](/final_annotation.png)
+
+::: tip
+CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
+:::
 </div>
-          <span class="bg-light-green-lighten-2">
-              CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
-          </span>
         </v-card-text>
       </v-card>
     </v-col>
