@@ -151,7 +151,7 @@ print("The first figure shows the explained variance ratio of the principal comp
       </template>
       <template v-slot:output>
 <div>
-To optimize the cell type annotation step, we can try using a different tool or adjusting the parameters. Given the options available, let's use the `AnnotatorCelltypist` tool, which is known to work well if it can find a good matching model. We will use the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
+Previously, CellAgent used the `AnnotatorCellmarkerACT` tool to annotate cell types. To optimize the cell type annotation step, we can try using a different tool or adjusting the parameters. Given the options available, let's use the `AnnotatorCelltypist` tool, which is known to work well if it can find a good matching model. We will use the "Immune_All_Low.pkl" model, which is suitable for immune sub-populations.
 
 Here is the complete code to perform cell type annotation using the `AnnotatorCelltypist` tool:
 
@@ -170,6 +170,8 @@ print("Cell type annotation complete. The annotated cell types are stored in ada
 ```
 
 This code initializes the `AnnotatorCelltypist` tool, runs the annotation process using the "Immune_All_Low.pkl" model, and stores the annotated cell types in the `adata.obs['cell_typist_label']` column. This model is specifically designed for immune sub-populations, which should be suitable for the given dataset of human peripheral blood mononuclear cells.
+
+![An image](/output.png)
 </div>
       </template>
     </demo-frame>
@@ -181,10 +183,67 @@ This code initializes the `AnnotatorCelltypist` tool, runs the annotation proces
         CellAgent can understand your natural language requirements and, at any point during the execution, respond to your natural language feedback by generating new code to meet your needs.
       </template>
       <template v-slot:input>
-        your input
+        Set the npca parameter to 30 and display the Louvain clustering results.
+      </template>
+      <template v-slot:thought>
+<div>
+The current step is: Dimensionality Reduction.
+
+In this step, CellAgent executed the code `sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)` to compute the neighborhood graph.
+
+The current step has been completed, and the user has provided new feedback: Set the npca parameter to 30 and display the Louvain clustering results.
+
+Please continue to generate code and natural language explanations to better meet the user's needs.
+</div>
       </template>
       <template v-slot:output>
-        your output
+<div>
+To meet the user's requirements, we will set the `npca` parameter to 30 for the PCA and then perform Louvain clustering. We will visualize the clustering results using UMAP. Here is the code to complete the current step:
+
+```python
+# Dimensionality reduction using PCA with npca=30 and Louvain clustering
+import scanpy as sc
+import matplotlib.pyplot as plt
+
+# Perform PCA with npca=30
+sc.tl.pca(adata, svd_solver='arpack', n_comps=30)
+
+# Visualize the explained variance ratio to determine the number of principal components to use
+sc.pl.pca_variance_ratio(adata, log=True)
+plt.savefig(f"{cfg['img_save_dir']}/pca_variance_ratio_30.png")
+print("PCA variance ratio plot with npca=30 saved as 'pca_variance_ratio_30.png'.")
+
+# Compute the neighborhood graph using 30 principal components
+sc.pp.neighbors(adata, n_neighbors=10, n_pcs=30)
+
+# Perform UMAP
+sc.tl.umap(adata)
+
+# Perform Louvain clustering
+sc.tl.louvain(adata)
+
+# Visualize the UMAP with Louvain clustering results
+sc.pl.umap(adata, color=['louvain'])
+plt.savefig(f"{cfg['img_save_dir']}/umap_louvain.png")
+print("UMAP plot with Louvain clustering results saved as 'umap_louvain.png'.")
+
+# Save the data with PCA, UMAP, and Louvain clustering results
+adata.write(f"{cfg['output_dir']}/dimensionality_reduction_louvain_data.h5ad")
+print("Dimensionality reduction with Louvain clustering complete and data saved as 'dimensionality_reduction_louvain_data.h5ad'.")
+```
+
+Explanation:
+1. **PCA with npca=30**: We perform PCA with the number of principal components set to 30.
+2. **Visualization**: We visualize the explained variance ratio for the PCA with 30 components.
+3. **Neighborhood Graph**: We compute the neighborhood graph using 30 principal components.
+4. **UMAP**: We perform UMAP for further dimensionality reduction and visualization.
+5. **Louvain Clustering**: We perform Louvain clustering to identify clusters in the data.
+6. **Visualization**: We visualize the UMAP results with the Louvain clustering results.
+7. **Save Data**: We save the AnnData object with the PCA, UMAP, and Louvain clustering results.
+
+![An image](/output1.png)
+![An image](/output2.png)
+</div>
       </template>
     </demo-frame>
   </v-tabs-window-item>
@@ -339,7 +398,8 @@ adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'],
 ```
 
 After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-![An image](/example.jpg)
+
+![An image](/final_annotation.png)
 </div>
           <span class="bg-light-green-lighten-2">
               CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
