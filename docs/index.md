@@ -105,12 +105,14 @@ After an initial analysis, 6 steps are required to complete your request:
       </template>
       <template v-slot:thought>
 <div>
-Data Format: AnnData object with n_obs × n_vars = 2638 × 32738
+Data Format: 
+
+```pythonAnnData object with n_obs × n_vars = 2638 × 32738
     obs: 'n_genes_by_counts', 'log1p_n_genes_by_counts', 'total_counts', 'log1p_total_counts', 'pct_counts_in_top_50_genes', 'pct_counts_in_top_100_genes', 'pct_counts_in_top_200_genes', 'pct_counts_in_top_500_genes', 'total_counts_mt', 'log1p_total_counts_mt', 'pct_counts_mt'
     var: 'gene_ids', 'n_cells_by_counts', 'mean_counts', 'log1p_mean_counts', 'pct_dropout_by_counts', 'total_counts', 'log1p_total_counts', 'mt', 'highly_variable', 'means', 'dispersions', 'dispersions_norm'
     uns: 'log1p', 'hvg'
     layers: 'counts'
-
+```
 The code has been ran: `[history code]`
 The current step is: Dimensionality Reduction. Generate code to complete the current step.
 
