@@ -392,7 +392,7 @@ adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'],
 ```
 
 After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-![An image](/example.jpg)
+![An image](/final_annotation.png)
 </div>
           <span class="bg-light-green-lighten-2">
               CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
