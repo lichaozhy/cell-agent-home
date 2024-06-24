@@ -445,7 +445,6 @@ CellAgent can streamline your single-cell data analysis workflow, allowing you t
 * **Interactively Query:** Through continuous dialogue, you can submit new requests seamlessly. CellAgent will strive to meet your needs and provide real-time analysis and response.
 * **Ensure Reliable Conclusions:** CellAgent employs a unique self-iterative optimization mechanism that ensures the reliability and high quality of results throughout the processing.
 </div>
-</div>
 
 
 ## More on CellAgent
