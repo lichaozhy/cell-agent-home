@@ -19,7 +19,7 @@
           border="surface-variant sm opacity-100"
           title="Thought"
           variant="text"
-          class="rounded-0"
+          class="rounded-0 border-t-0"
         >
           <v-card-text>
             <slot name="thought">Thought</slot>
