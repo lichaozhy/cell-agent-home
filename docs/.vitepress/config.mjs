@@ -9,8 +9,8 @@ export default defineConfig({
     siteTitle: '',
     logo: '/logo.png',
     nav: [
-      { text: 'Research', link: 'https://github.com' },
-      { text: 'CellAgent', link: 'https:/github.com' }
+      { text: 'Research', link: 'https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1' },
+      { text: 'CellAgent', link: 'http://cell.agent4science.cn/' }
     ],
 
     sidebar: [
