@@ -451,7 +451,7 @@ CellAgent can streamline your single-cell data analysis workflow, allowing you t
 
 ### Research
 
-CellAgent is publicly accessible on BiorXiv. 
+CellAgent is publicly accessible on [BiorXiv](https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1). 
 
 <!-- ### Meet the team
 
