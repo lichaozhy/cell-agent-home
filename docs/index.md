@@ -30,8 +30,6 @@ onMounted(async function assertInCN() {
   } catch {
     isCN.value = false;
   }
-
-  console.log(isCN.value)
 })
 </script>
 
@@ -326,10 +324,13 @@ GPT-4 provided code for a basic solution.
         class="rounded-0 border-t-0 text-success"
       >
         <v-card-text>
-        <span class="bg-light-green-lighten-2">
-          CellAgent is starting the process. Please wait for a while.<br>
-          ... [the process of task decomposition and the execution of previous steps]<br>
-        </span>
+          <v-expansion-panels tile elevation="0">
+            <v-expansion-panel title="Thought and code generation">
+              <v-expansion-panel-text>
+                <span class="bg-light-green-lighten-2">
+                  CellAgent is starting the process. Please wait for a while.<br>
+                  ... [the process of task decomposition and the execution of previous steps]<br>
+                </span>
 <div>
 
 ::: code-group
@@ -359,10 +360,15 @@ adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'],
 ```
 
 :::
-
-<span class="bg-light-green-lighten-2">
-After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-</span>
+</div>
+                <span class="bg-light-green-lighten-2">
+                  After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
+                </span>
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        
+<div>
 
 ![An image](/final_annotation.png)
 
