@@ -437,20 +437,14 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
 ** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.
 </div>
 
-CellAgent can streamline your single-cell data analysis workflow, ensuring
-high-quality results with minimal effort. Our intuitive interface and robust
-algorithms make it easy to process and interpret your data, regardless of your
-level of expertise. With CellAgent website, you can:
+CellAgent can streamline your single-cell data analysis workflow, allowing you to obtain high-quality results without the need for complex coding. Whether you are a domain expert or a novice, our online platform enables effortless data analysing and interpretation. With CellAgent, you can:
 
 <div class="mx-8 px-8">
 
-* **Upload and Analyze:** Click to upload your single-cell data file, then chat
-with CellAgent, providing necessary descriptions. The more detailed your input,
-the better the results. CellAgent will finish executing through each step,
-displaying the results as it goes.
-
-* **Explore with Demos:** Click on our provided examples to quickly experience the impressive capabilities of CellAgent.
-* **Interactive Requests:** Through ongoing dialogue, you can continuously submit new requests, then CellAgent will try to meet your needs at all times
+* **Automate Analysis:** From data preprocessing to conclusions, CellAgent automates the entire analysis process, significantly reducing manual intervention and allowing you to focus more on scientific discoveries.
+* **Interactively Query:** Through continuous dialogue, you can submit new requests seamlessly. CellAgent will strive to meet your needs and provide real-time analysis and response.
+* **Ensure Reliable Conclusions:** CellAgent employs a unique self-iterative optimization mechanism that ensures the reliability and high quality of results throughout the processing.
+</div>
 </div>
 
 
