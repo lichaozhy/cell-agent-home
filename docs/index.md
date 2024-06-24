@@ -60,7 +60,7 @@ onMounted(async function assertInCN() {
 <br><br>By constructing and coordinating several LLM-driven biological expert roles,
 CellAgent conducts step-by-step execution and iterative optimization for various
 tasks, substantially reducing the workload for science data analyses, bringing
-us into the “Agent for Science” era.<br><br>
+us into the “Agent for Science” era.<br>
 
 <v-tabs fixed-tabs v-model="tab">
   <v-tab text="Task decomposition" value="0"></v-tab>
@@ -369,7 +369,6 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
   </v-row>
 </v-container>
 
-<br><>
 ### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
 <v-container class="my-16 py-0 px-8">
