@@ -71,7 +71,7 @@ us into the “Agent for Science” era.
 
 <v-tabs-window v-model="tab">
   <v-tabs-window-item value="0">
-    <demo-frame>
+    <demo-frame no-thought>
       <template v-slot:description>
         For complex scRNA-seq data analysis tasks, CellAgent can emulate the process of a human expert by first breaking down the task into sub-steps and then executing them sequentially.
       </template>
@@ -96,7 +96,7 @@ After an initial analysis, 6 steps are required to complete your request:
   </v-tabs-window-item>
 
   <v-tabs-window-item value="1">
-    <demo-frame>
+    <demo-frame no-input>
       <template v-slot:description>
         During each step, CellAgent can automatically generate and execute code, providing the resulting plots and data.
       </template>
@@ -142,7 +142,7 @@ print("The first figure shows the explained variance ratio of the principal comp
   </v-tabs-window-item>
 
   <v-tabs-window-item value="2">
-    <demo-frame>
+    <demo-frame no-input>
       <template v-slot:description>
         CellAgent can automatically optimize the generated solutions and ultimately select the best one to present.
       </template>

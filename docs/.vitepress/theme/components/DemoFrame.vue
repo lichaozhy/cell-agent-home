@@ -10,6 +10,7 @@
           title="Input"
           variant="text"
           class="rounded-0"
+          v-if="!noInput"
         >
           <v-card-text>
             <slot name="input">Input</slot>
@@ -19,7 +20,9 @@
           border="surface-variant sm opacity-100"
           title="Thought"
           variant="text"
-          class="rounded-0 border-t-0"
+          class="rounded-0 "
+          v-if="!noThought"
+          :class="{ 'border-t-0': !noInput }"
         >
           <v-card-text>
             <slot name="thought">Thought</slot>
@@ -33,10 +36,22 @@
         >
           <v-card-text>
             <slot name="output">Output</slot>
-					</v-card-text> </v-card
-      ></v-col>
+          </v-card-text>
+        </v-card></v-col
+      >
     </v-row>
   </v-container>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  noInput: {
+    type: Boolean,
+    default: false,
+  },
+  noThought: {
+    type: Boolean,
+    default: false,
+  },
+});
+</script>
