@@ -57,10 +57,10 @@ onMounted(async function assertInCN() {
     ></iframe>
 </v-responsive>
 
-By constructing and coordinating several LLM-driven biological expert roles,
+<br><br>By constructing and coordinating several LLM-driven biological expert roles,
 CellAgent conducts step-by-step execution and iterative optimization for various
 tasks, substantially reducing the workload for science data analyses, bringing
-us into the “Agent for Science” era.
+us into the “Agent for Science” era.<br><br>
 
 <v-tabs fixed-tabs v-model="tab">
   <v-tab text="Task decomposition" value="0"></v-tab>
@@ -249,65 +249,13 @@ Explanation:
   </v-tabs-window-item>
 </v-tabs-window>
 
-### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
-<v-container class="my-16 py-0 px-8">
-  <v-row>
-    <v-col>
-      <v-card
-        title="Task Completion Rate"
-        variant="plain"
-      >
-        <v-card-text class="py-0">
-          <v-container class="pa-0">
-            <v-row no-gutters>
-              <v-col>
-                <div style="font-size:84px">47%</div>
-                <div>GPT-4</div>
-              </v-col>
-              <v-col class="text-light-green">
-                <div style="font-size:84px">92%</div>
-                <div>CellAgent</div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card-text>
-      </v-card>
-    </v-col>
-    <v-col>
-      <v-card
-        title="Task Performance**"
-        variant="plain"
-      >
-        <v-card-text class="py-0">
-          <v-container class="pa-0">
-            <v-row no-gutters>
-              <!-- <v-col>
-                <div style="font-size:84px"></div>
-                <div>CellAgent</div>
-              </v-col> -->
-              <v-col class="text-light-green">
-                <div style="font-size:84px">107.23%*</div>
-                <div>CellAgent</div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card-text>
-      </v-card>
-    </v-col>
-  </v-row>
-</v-container>
-
-\* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.
-
-** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.
-
-### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
+### CellAgent surpasses traditional data analysing approaches in its advanced automation capabilities on single-cell analysis.
 
 <v-container class="my-8 py-0 px-8">
   <v-row>
     <v-col cols="6">
-      <h3 class="mb-2">GPT-4</h3>
+      <h3 class="mb-2">Traditional Method</h3>
       <v-card
         border="surface-variant sm opacity-100"
         title="Input"
@@ -315,7 +263,8 @@ Explanation:
         class="rounded-0"
       >
         <v-card-text>
-          This is a classic single-cell data analysis dataset, consisting of 3k human peripheral blood mononuclear cells from a healthy donor. Please perform the cell type annotation task and provide the complete Python code.
+          Data file: xxx.h5ad<br>
+          Task Requirement: Annotate cell types
         </v-card-text>
       </v-card>
       <v-card
@@ -416,6 +365,60 @@ CellAgent tried various solutions, evaluated their results, and ultimately produ
     </v-col>
   </v-row>
 </v-container>
+
+### CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
+
+<v-container class="my-16 py-0 px-8">
+  <v-row>
+    <v-col>
+      <v-card
+        title="Task Completion Rate"
+        variant="plain"
+      >
+        <v-card-text class="py-0">
+          <v-container class="pa-0">
+            <v-row no-gutters>
+              <v-col>
+                <div style="font-size:84px">47%</div>
+                <div>GPT-4</div>
+              </v-col>
+              <v-col class="text-light-green">
+                <div style="font-size:84px">92%</div>
+                <div>CellAgent</div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col>
+      <v-card
+        title="Task Performance**"
+        variant="plain"
+      >
+        <v-card-text class="py-0">
+          <v-container class="pa-0">
+            <v-row no-gutters>
+              <!-- <v-col>
+                <div style="font-size:84px"></div>
+                <div>CellAgent</div>
+              </v-col> -->
+              <v-col class="text-light-green">
+                <div style="font-size:84px">107.23%</div>
+                <div>CellAgent*</div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
+</v-container>
+
+\* In typical scRNA-seq data analysis tasks, CellAgent's performance can reach 107.23% compared to the widely used and effective existing algorithms.
+
+** The tasks referred to here mainly include batch effect correction, cell type annotation, and trajectory inference, corresponding to the existing algorithms Scanorama, GPT-4 annotation, and Slingshot, respectively.<br><br><br>
+
 
 CellAgent can streamline your single-cell data analysis workflow, ensuring
 high-quality results with minimal effort. Our intuitive interface and robust
