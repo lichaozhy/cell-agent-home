@@ -279,24 +279,58 @@ Explanation:
         class="rounded-0 border-t-0"
       >
         <v-card-text style="text-wrap-mode:wrap;white-space:pre-wrap;white-space-collapse:preserves">
-          <span class="bg-grey-lighten-2">Sure, I can help with that. We'll use the Scanpy library in Python for single-cell RNA-seq data analysis. Here's the general workflow we'll follow:<br>
-1. Load the dataset.<br>
-2. Preprocess the data (filtering, normalization, etc.).<br>
-3. Perform clustering.<br>
-4. Annotate the cell types.<br>
-Let's start by providing the complete Python code for this task:<br>
+          
+<div>
+
+```python
+import scanpy as sc
+import pandas as pd
+adata = sc.datasets.pbmc3k()
+print(adata)
+sc.pp.filter_cells(adata, min_genes=200)
+sc.pp.filter_genes(adata, min_cells=3)
+adata.var['mt'] = adata.var_names.str.startswith('MT-')
+sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], percent_top=None, log1p=False, inplace=True)
+adata = adata[adata.obs.n_genes_by_counts < 2500, :]
+adata = adata[adata.obs.pct_counts_mt < 5, :]
+sc.pp.normalize_total(adata, target_sum=1e4)
+sc.pp.log1p(adata)
+sc.pp.highly_variable_genes(adata, min_mean=0.0125, max_mean=3, min_disp=0.5)
+adata = adata[:, adata.var.highly_variable]
+sc.tl.pca(adata, svd_solver='arpack')
+sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
+sc.tl.leiden(adata)
+sc.tl.umap(adata)
+sc.pl.umap(adata, color=['leiden'])
+```
+</div>
+<span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
 </span>
 <div>
 
 ```python
-...
-cell_types = pd.DataFrame(index=adata.obs_names)
+marker_genes = {
+    'T_cells': ['IL7R', 'CD3D'],
+    'B_cells': ['CD79A', 'MS4A1'],
+    'NK_cells': ['GNLY', 'NKG7'],
+    'Monocytes': ['LYZ', 'CD14'],
+    'Dendritic_cells': ['FCER1A', 'CST3'],
+    'Megakaryocytes': ['PPBP']
+}
+
+sc.tl.score_genes_cell_cycle(adata, s_genes=marker_genes['T_cells'], g2m_genes=marker_genes['B_cells'])
+sc.pl.umap(adata, color=['CD3D', 'CD79A', 'GNLY', 'LYZ', 'FCER1A', 'PPBP'])
+
+adata.obs['cell_type'] = adata.obs['leiden'].astype(str)
+
 for cell_type, genes in marker_genes.items():
-    adata.obs[cell_type] = adata[:, genes].X.mean(1)
-...
+    adata.obs.loc[adata[:, genes].X.mean(1) > 0.5, 'cell_type'] = cell_type
+
+sc.pl.umap(adata, color=['cell_type'])
 ```
 </div>
-
+<span class="bg-grey-lighten-2">"📄 Finally，we get the annotation result."
+</span>
 <div>
 
 ::: danger
@@ -322,7 +356,7 @@ GPT-4 provided code for a basic solution.
       </v-card>
       <v-card
         border="success sm opacity-100"
-        title="Output"
+        title=""
         variant="text"
         class="rounded-0 border-t-0 text-success"
       >
