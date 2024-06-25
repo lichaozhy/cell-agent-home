@@ -25,6 +25,6 @@ the problem. Thank you.
 We are excited to see the potential of CellAgent to greatly enhance productivity,
 foster new discoveries, and deepen our understanding of biological systems.
   </div>
-  <v-btn rounded href="http://cell.agent4science.cn/" class="bg-white">Try on CellAgent 👉</v-btn>
+  <v-btn rounded href="http://cell.agent4science.cn/start" class="bg-white">Try on CellAgent 👉</v-btn>
   <v-btn variant="text" href="https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1" target="_blank">View CellAgent research ></v-btn>
 </v-sheet>
