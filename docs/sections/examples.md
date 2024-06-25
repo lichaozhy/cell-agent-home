@@ -1,4 +1,4 @@
-### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
+### CellAgent surpasses traditional analysing process in its advanced automation capabilities on single-cell data.
 
 <v-container class="mt-8 mb-16 py-0 px-0">
   <v-row>
