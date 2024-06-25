@@ -1,9 +1,11 @@
 ## CellAgent surpasses traditional analysing process in its advanced automation capabilities on single-cell data.
 
-<v-container class="mt-8 mb-16 py-0 px-0">
+<div class="mb-2"></div>
+
+<v-container class="mb-16 py-0 px-0">
   <v-row>
     <v-col cols="6">
-      <h3 class="mb-2">Traditional Method</h3>
+      <div class="mb-2 text-h5">Traditional Method</div>
       <v-card
         border="surface-variant sm opacity-50"
         variant="text"
@@ -84,7 +86,7 @@ sc.pl.umap(adata, color=['cell_type'])
       </v-card>
     </v-col>
     <v-col cols="6">
-      <h3 class="mb-2 text-success">CellAgent</h3>
+      <div class="mb-2 text-h5 text-success">CellAgent</div>
       <v-card
         border="success sm opacity-50"
         variant="text"

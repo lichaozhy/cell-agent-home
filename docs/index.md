@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+title: CellAgent
 hero:
   name: "CellAgent"
   text: "An LLM-driven agent for single-cell data analysis, ensuring high-quality results with minimal effort."
@@ -27,44 +27,35 @@ watch(isDark, value => {
 }, { immediate: true })
 
 const tab = ref('0')
-const isCN = ref(false)
+const isCN = ref(null)
 
 onMounted(async function assertInCN() {
-  // try {
-  //   const response = await fetch('//ipinfo.io/json');
-  //   const address = await response.json();
+  const img = new Image();
+  
+  img.src = "https://www.youtube.com/favicon.ico";
 
-  //   isCN.value = address.country === 'CN';
-  // } catch {
-  //   isCN.value = false;
-  // }
-    const img = new Image();
-    img.src = "https://www.youtube.com/favicon.ico";
-    img.onload = () => {
-      // console.log("false --")
-      isCN.value = false
-    };
-    img.onerror = () => {
-      // console.log("true --")
-      isCN.value = true
-    };
+  return new Promise((resolve) => {
+    img.onload = () => isCN.value = false;
+    img.onerror = () => isCN.value = true;
+  })
 })
 </script>
 
 <!--@include: ./sections/banner.md-->
-<div class="my-16"></div>
 
-## By coordinating several LLM-driven biological experts, CellAgent automatically conducts step-by-step execution and iterative optimization for various tasks, substantially reducing the workload for science data analyses, bringing us into the “Agent for Science” era.
+<div class="mt-16"></div>
 
 <!--@include: ./sections/features.md-->
 
+<div class="mt-16"></div>
+
 <!--@include: ./sections/examples.md-->
 
-<div class="my-16"></div>
+<div class="mt-16"></div>
 
 <!--@include: ./sections/comparation.md-->
 
-<div class="my-16"></div>
+<div class="mt-16"></div>
 
 CellAgent can streamline your single-cell data analysis workflow, allowing you to obtain high-quality results without the need for complex coding. Whether you are a domain expert or a novice, our online platform enables effortless data analysing and interpretation. With CellAgent, you can:
 
@@ -74,5 +65,7 @@ CellAgent can streamline your single-cell data analysis workflow, allowing you t
 * **Interactively Query:** Through continuous dialogue, you can submit new requests seamlessly. CellAgent will strive to meet your needs and provide real-time analysis and response.
 * **Obtain Reliable Conclusions:** CellAgent employs a unique self-iterative optimization mechanism that ensures the reliability and high quality of results throughout the processing.
 </div>
+
+<div class="mt-16"></div>
 
 <!--@include: ./sections/more.md-->

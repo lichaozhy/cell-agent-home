@@ -1,11 +1,15 @@
-<v-tabs class="mt-16" fixed-tabs v-model="tab">
+## By coordinating several LLM-driven biological experts, CellAgent automatically conducts step-by-step execution and iterative optimization for various tasks, substantially reducing the workload for science data analyses, bringing us into the “Agent for Science” era.
+
+<div class="mb-2"></div>
+
+<v-tabs class="border-b-sm" fixed-tabs v-model="tab">
   <v-tab text="Task decomposition" value="0"></v-tab>
   <v-tab text="Execution for sub-step" value="1"></v-tab>
   <v-tab text="Self-optimization" value="2"></v-tab>
   <v-tab text="Handle user feedback" value="3"></v-tab>
 </v-tabs>
 
-<v-tabs-window v-model="tab">
+<v-tabs-window class="mt-8" v-model="tab">
   <v-tabs-window-item value="0">
     <demo-frame no-thought>
       <template v-slot:description>
