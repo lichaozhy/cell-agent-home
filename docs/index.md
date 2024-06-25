@@ -304,6 +304,7 @@ sc.tl.umap(adata)
 sc.pl.umap(adata, color=['leiden'])
 ```
 </div>
+![An image](/user.png)
 <span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
 </span>
 <div>
@@ -331,12 +332,12 @@ sc.pl.umap(adata, color=['cell_type'])
 </div>
 <span class="bg-grey-lighten-2">"📄 Finally，we get the annotation result."
 </span>
-<div>
+<!-- <div>
 
 ::: danger
 GPT-4 provided code for a basic solution.
 :::
-</div>
+</div> -->
         </v-card-text>
       </v-card>
     </v-col>
