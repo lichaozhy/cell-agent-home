@@ -23,7 +23,7 @@
       >
         <v-card-text>
         <chat-bubble>
-            <template v-slot:subject><v-img src="/user.png" /></template>
+            <template v-slot:subject><v-img src="/logo.png" /></template>
 <div>
 
 ```python
@@ -51,7 +51,7 @@ sc.pl.umap(adata, color=['leiden'])
         </chat-bubble>
 
 <chat-bubble>
-  <template v-slot:subject><v-img src="/user.png" /></template>
+  <template v-slot:subject><v-img src="/logo.png" /></template>
   <span class="bg-grey-lighten-2">
     "Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate."
   </span>
