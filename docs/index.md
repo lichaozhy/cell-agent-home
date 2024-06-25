@@ -308,6 +308,7 @@ sc.pl.umap(adata, color=['leiden'])
 ![An image](/user.png)
 <span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
 </span>
+
 <div>
 
 ```python
@@ -331,6 +332,7 @@ for cell_type, genes in marker_genes.items():
 sc.pl.umap(adata, color=['cell_type'])
 ```
 </div>
+
 <span class="bg-grey-lighten-2">"📄 Finally，we get the annotation result."
 </span>
 <!-- <div>
