@@ -1,21 +1,3 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const tab = ref('0')
-const isCN = ref(false)
-
-onMounted(async function assertInCN() {
-  try {
-    const response = await fetch('//ipinfo.io/json');
-    const address = await response.json();
-
-    isCN.value = address.country === 'CN';
-  } catch {
-    isCN.value = false;
-  }
-})
-</script>
-
 <v-responsive
   :aspect-ratio="16 / 9"
   class="border-0 px-md-16 px-sm-0 py-0"

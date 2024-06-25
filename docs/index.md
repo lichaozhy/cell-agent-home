@@ -14,6 +14,33 @@ hero:
       text: View CellAgent research >
       link: https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1
 ---
+<script setup>
+import { watch, ref, onMounted } from 'vue';
+import { useData } from 'vitepress'
+import { useTheme } from 'vuetify'
+
+const { isDark } = useData();
+const theme = useTheme()
+
+watch(isDark, value => {
+  theme.global.name.value = value ? 'dark' : 'light'
+}, { immediate: true })
+
+const tab = ref('0')
+const isCN = ref(false)
+
+onMounted(async function assertInCN() {
+  try {
+    const response = await fetch('//ipinfo.io/json');
+    const address = await response.json();
+
+    isCN.value = address.country === 'CN';
+  } catch {
+    isCN.value = false;
+  }
+})
+</script>
+
 <!--@include: ./sections/banner.md-->
 <div class="my-16"></div>
 

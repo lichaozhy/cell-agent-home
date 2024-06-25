@@ -18,12 +18,10 @@
       </v-card>
       <v-card
         border="surface-variant sm opacity-100"
-        title="Output"
         variant="text"
         class="rounded-0 border-t-0"
       >
-        <v-card-text style="text-wrap-mode:wrap;white-space:pre-wrap;white-space-collapse:preserves">
-          
+        <v-card-text>
 <div>
 
 ```python
@@ -49,9 +47,10 @@ sc.pl.umap(adata, color=['leiden'])
 ```
 </div>
 
-![An image](/user.png)
-<span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
-</span>
+<chat-bubble>
+  <span class="bg-grey-lighten-2">
+    "Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate."
+  </span>
 <div>
 
 ```python
@@ -75,14 +74,10 @@ for cell_type, genes in marker_genes.items():
 sc.pl.umap(adata, color=['cell_type'])
 ```
 </div>
-<span class="bg-grey-lighten-2">"📄 Finally，we get the annotation result."
-</span>
-<!-- <div>
-
-::: danger
-GPT-4 provided code for a basic solution.
-:::
-</div> -->
+  <span class="bg-grey-lighten-2">
+    "📄 Finally，we get the annotation result."
+  </span>
+</chat-bubble>
         </v-card-text>
       </v-card>
     </v-col>
@@ -107,57 +102,75 @@ GPT-4 provided code for a basic solution.
         class="rounded-0 border-t-0 text-success"
       >
         <v-card-text>
-          <v-expansion-panels tile elevation="0">
-            <v-expansion-panel title="Thought and code generation">
-              <v-expansion-panel-text>
-                <span class="bg-light-green-lighten-2">
-                  This is raw PBMC dataset. Please help me complete cell type annotation.<br>
-                </span>
+          <chat-bubble>
+            <span class="bg-grey-lighten-2">
+              This is raw PBMC dataset. Please help me complete cell type annotation.<br>
+            </span>
+          </chat-bubble>
+          <chat-bubble>
+            <template v-slot:subject><v-img src="/logo.png" /></template>
+            <span class="bg-light-green-lighten-2">
+              After an initial anlysis, 6 steps are required to complete your request:<br>
+              1.Quality Control<br>
+              2. Normalization<br>
+              3. Identification of Highly<br>
+              4. Dimensionality Reduction<br>
+              5. Clustering<br>
+              6. Clustering<br>
+            </span>
+            <span class="bg-light-green-lighten-2">
+              ...
+            </span>
+          </chat-bubble>
+          <chat-bubble>
+            <span class="bg-grey-lighten-2">
+              Please using the Leiden algorithm to cluster.
+            </span>
+          </chat-bubble>
+          <chat-bubble>
+            <template v-slot:subject><v-img src="/logo.png" /></template>
+            <span class="bg-light-green-lighten-2">
+              I will first compute the neighborhood graph and then apply the Leiden algorithm to identify clusters. Finally, visualize the clustering results using UMAP.
+            </span>
 <div>
 
-::: code-group
+```python
+# Compute the neighborhood graph
+sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
 
-```python [Basic]
-# Cell Type Annotation using AnnotatorCellmarkerACT
-annotator = AnnotatorCellmarkerACT()
-adata = annotator.run(species='Human', tissue_type='Blood', adata=adata, obs_cluster='leiden')
-...
+# Perform clustering using the Leiden algorithm
+sc.tl.leiden(adata, resolution=0.5)
+
+# Run UMAP for visualization
+sc.tl.umap(adata)
+
+# Visualize the clustering results
+sc.pl.umap(adata, color=['leiden'], show=True, save=False)
+plt.savefig(f"{cfg['img_save_dir']}/umap_leiden.png")
+plt.show()
+plt.close()
+
+print("Clustering completed using the Leiden algorithm. The UMAP plot shows the clusters identified by the Leiden algorithm.")
 ```
 
-```python [Optimized]
-# To optimize the cell type annotation step, let's use the
-# `AnnotatorCelltypist` tool and the "Immune_All_Low.pkl" model,
-# which is suitable for immune sub-populations.
-annotator = AnnotatorCelltypist()
-adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
-...
-```
-
-```python [Further Optimized]
-# To further optimize the cell type annotation step, we can try
-# using the `AnnotatorSCType` tool.
-annotator = AnnotatorSCType()
-adata = annotator.run(adata=adata, obs_cluster='leiden', path=cfg['output_dir'], tissue_type='Immune system')
-...
-```
-
-:::
+![An image](/cellexample1.png)
 </div>
-                <span class="bg-light-green-lighten-2">
-                  After being evaluated by GPT-4, the labels for these categories were finally confirmed and saved as ob1.obs['final_type']:
-                </span>
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
-        
+          </chat-bubble>
+          <chat-bubble>
+            <span class="bg-grey-lighten-2">
+              Great, help me complete the cell type annotation finally.
+            </span>
+          </chat-bubble>
+          <chat-bubble>
+            <template v-slot:subject><v-img src="/logo.png" /></template>
+            <span class="bg-light-green-lighten-2">
+              Combining differential gene expression across clusters and results from cell type annotation tools like Celltypist, the cell labels for these clusters were finally confirmed and saved as `.obs['final_type']` after evaluation.
+            </span>
 <div>
 
-![An image](/final_annotation.png)
-
-::: tip
-CellAgent tried various solutions, evaluated their results, and ultimately produced a higher-quality result.
-:::
+![An image](/cellexample2.png)
 </div>
+          </chat-bubble>
         </v-card-text>
       </v-card>
     </v-col>

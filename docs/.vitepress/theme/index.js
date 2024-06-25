@@ -19,9 +19,13 @@ const vuetify = createVuetify({
       mdi,
     },
   },
+  theme: {
+    defaultTheme: 'light'
+  }
 })
 
 import DemoFrame from './components/DemoFrame.vue';
+import ChatBubble from './components/ChatBubble.vue';
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -35,5 +39,6 @@ export default {
     // ...
     app.use(vuetify)
     app.component('DemoFrame', DemoFrame)
+    app.component('ChatBubble', ChatBubble)
   }
 }
