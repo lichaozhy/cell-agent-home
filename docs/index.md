@@ -41,14 +41,13 @@ onMounted(async function assertInCN() {
     const img = new Image();
     img.src = "https://www.youtube.com/favicon.ico";
     img.onload = () => {
-      console.log("false --")
+      // console.log("false --")
       isCN.value = false
     };
     img.onerror = () => {
-      console.log("true --")
+      // console.log("true --")
       isCN.value = true
     };
-  }
 })
 </script>
 
