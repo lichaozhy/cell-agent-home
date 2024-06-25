@@ -44,7 +44,7 @@ onMounted(async function assertInCN() {
 <!--@include: ./sections/banner.md-->
 <div class="my-16"></div>
 
-### By constructing and coordinating several LLM-driven biological expert roles, CellAgent conducts step-by-step execution and iterative optimization for various tasks, substantially reducing the workload for science data analyses, bringing us into the “Agent for Science” era.
+## By constructing and coordinating several LLM-driven biological expert roles, CellAgent conducts step-by-step execution and iterative optimization for various tasks, substantially reducing the workload for science data analyses, bringing us into the “Agent for Science” era.
 
 <!--@include: ./sections/features.md-->
 
