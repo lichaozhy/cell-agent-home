@@ -305,8 +305,7 @@ sc.pl.umap(adata, color=['leiden'])
 ```
 </div>
 
-![An image](/user.png)
-<span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
+<span class="bg-grey-lighten-2"><img src="./user.png" alt="Expert">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
 </span>
 <div>
 
