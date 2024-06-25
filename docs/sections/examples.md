@@ -134,25 +134,6 @@ sc.pl.umap(adata, color=['cell_type'])
             </span>
 <div>
 
-```python
-# Compute the neighborhood graph
-sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
-
-# Perform clustering using the Leiden algorithm
-sc.tl.leiden(adata, resolution=0.5)
-
-# Run UMAP for visualization
-sc.tl.umap(adata)
-
-# Visualize the clustering results
-sc.pl.umap(adata, color=['leiden'], show=True, save=False)
-plt.savefig(f"{cfg['img_save_dir']}/umap_leiden.png")
-plt.show()
-plt.close()
-
-print("Clustering completed using the Leiden algorithm. The UMAP plot shows the clusters identified by the Leiden algorithm.")
-```
-
 ![An image](/cellexample1.png)
 </div>
           </chat-bubble>
