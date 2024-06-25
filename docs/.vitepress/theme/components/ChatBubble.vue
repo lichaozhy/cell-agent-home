@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="mt-12 position-relative" border="sm">
+  <v-sheet class="my-16 position-relative" border="sm" rounded>
     <v-avatar
       size="33"
       class="chat-bubble-subject position-absolute border"

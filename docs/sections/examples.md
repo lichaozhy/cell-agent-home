@@ -6,7 +6,6 @@
       <h3 class="mb-2">Traditional Method</h3>
       <v-card
         border="surface-variant sm opacity-100"
-        title=""
         variant="text"
         class="rounded-0"
       >
@@ -88,7 +87,6 @@ sc.pl.umap(adata, color=['cell_type'])
       <h3 class="mb-2 text-success">CellAgent</h3>
       <v-card
         border="success sm opacity-100"
-        title=""
         variant="text"
         class="rounded-0 text-success"
       >
@@ -100,7 +98,6 @@ sc.pl.umap(adata, color=['cell_type'])
       </v-card>
       <v-card
         border="success sm opacity-100"
-        title=""
         variant="text"
         class="rounded-0 border-t-0 text-success"
       >
