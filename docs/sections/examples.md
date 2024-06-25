@@ -1,11 +1,11 @@
 ### CellAgent surpasses GPT-4 in its advanced automation capabilities on single-cell analysis.
 
-<v-container class="mt-8 mb-16 py-0 px-8">
+<v-container class="mt-8 mb-16 py-0 px-0">
   <v-row>
     <v-col cols="6">
       <h3 class="mb-2">Traditional Method</h3>
       <v-card
-        border="surface-variant sm opacity-100"
+        border="surface-variant sm opacity-50"
         variant="text"
         class="rounded-0"
       >
@@ -16,7 +16,7 @@
         </v-card-text>
       </v-card>
       <v-card
-        border="surface-variant sm opacity-100"
+        border="surface-variant sm opacity-50"
         variant="text"
         class="rounded-0 border-t-0"
       >
@@ -86,7 +86,7 @@ sc.pl.umap(adata, color=['cell_type'])
     <v-col cols="6">
       <h3 class="mb-2 text-success">CellAgent</h3>
       <v-card
-        border="success sm opacity-100"
+        border="success sm opacity-50"
         variant="text"
         class="rounded-0 text-success"
       >
@@ -97,7 +97,7 @@ sc.pl.umap(adata, color=['cell_type'])
         </v-card-text>
       </v-card>
       <v-card
-        border="success sm opacity-100"
+        border="success sm opacity-50"
         variant="text"
         class="rounded-0 border-t-0 text-success"
       >
