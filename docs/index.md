@@ -267,8 +267,9 @@ Explanation:
         class="rounded-0"
       >
         <v-card-text>
-          Data file: xxx.h5ad<br>
-          Task Requirement: Annotate cell types
+1.Researchers are required to have programming skills ⌨️<br>
+2.Expert knowledge and searches of relevant literature databases📚<br>
+3.Alternatively, use automated annotation tools📐<br>
         </v-card-text>
       </v-card>
       <v-card
@@ -314,7 +315,9 @@ GPT-4 provided code for a basic solution.
         class="rounded-0 text-success"
       >
         <v-card-text>
-          This is a classic single-cell data analysis dataset, consisting of 3k human peripheral blood mononuclear cells from a healthy donor. Please perform the cell type annotation task.
+1. Allows users to perform various single-cell data analyses through dialogue, completely code-free. <br>
+2. Multi-Agent architecture, leveraging collaboration among multiple experts to accomplish data analysis tasks.<br>
+3. Self-iterative evaluation effectively enhances the quality of data analysis.<br>
         </v-card-text>
       </v-card>
       <v-card
