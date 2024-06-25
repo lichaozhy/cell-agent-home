@@ -30,13 +30,20 @@ const tab = ref('0')
 const isCN = ref(false)
 
 onMounted(async function assertInCN() {
-  try {
-    const response = await fetch('//ipinfo.io/json');
-    const address = await response.json();
+  // try {
+  //   const response = await fetch('//ipinfo.io/json');
+  //   const address = await response.json();
 
-    isCN.value = address.country === 'CN';
+  //   isCN.value = address.country === 'CN';
+  // } catch {
+  //   isCN.value = false;
+  // }
+    try {
+    const response = await fetch('https://www.youtube.com', { method: 'HEAD' });
+
+    isCN.value = response.ok ? false : true;
   } catch {
-    isCN.value = false;
+    isCN.value = true;
   }
 })
 </script>
