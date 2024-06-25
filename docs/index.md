@@ -38,11 +38,14 @@ onMounted(async function assertInCN() {
   // } catch {
   //   isCN.value = false;
   // }
-    const response = await fetch('https://www.youtube.com', {
-        mode: 'no-cors' // This mode can be problematic as it won't return full response details due to CORS policies.
-      });
-    console.log('Status Code:', response.status);
-    isCN.value = response.status !== 200;
+    const img = new Image();
+    img.src = "https://www.youtube.com/favicon.ico";
+    img.onload = () => {
+      isCN.value = false
+    };
+    img.onerror = () => {
+      isCN.value = true
+    };
   }
 })
 </script>
