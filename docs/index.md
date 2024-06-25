@@ -38,12 +38,8 @@ onMounted(async function assertInCN() {
   // } catch {
   //   isCN.value = false;
   // }
-    try {
     const response = await fetch('https://www.youtube.com', { method: 'HEAD' });
-
-    isCN.value = response.ok ? false : true;
-  } catch {
-    isCN.value = true;
+    isCN.value = response.status !== 200;
   }
 })
 </script>
