@@ -38,7 +38,10 @@ onMounted(async function assertInCN() {
   // } catch {
   //   isCN.value = false;
   // }
-    const response = await fetch('https://www.youtube.com', { method: 'HEAD' });
+    const response = await fetch('https://www.youtube.com', {
+        mode: 'no-cors' // This mode can be problematic as it won't return full response details due to CORS policies.
+      });
+    console.log('Status Code:', response.status);
     isCN.value = response.status !== 200;
   }
 })
