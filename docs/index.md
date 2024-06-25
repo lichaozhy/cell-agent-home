@@ -366,10 +366,10 @@ GPT-4 provided code for a basic solution.
       >
         <v-card-text>
 
-<img src="./logo.png" alt="Logo" width="20">
-<span class="bg-light-green-lighten-2">
+<span class="bg-grey-lighten-2">
   This is raw PBMC dataset. Please help me complete cell type annotation.<br>
 </span> 
+
           <v-expansion-panels tile elevation="0">
             <v-expansion-panel title="Thought and code generation">
               <v-expansion-panel-text>
