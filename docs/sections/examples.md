@@ -23,7 +23,6 @@
       >
         <v-card-text>
         <chat-bubble>
-            <template v-slot:subject><v-img src="/logo.png" /></template>
 <div>
 
 ```python
