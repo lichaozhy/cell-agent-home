@@ -10,7 +10,7 @@ export default defineConfig({
     logo: '/logo.png',
     nav: [
       { text: 'Research', link: 'https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1' },
-      { text: 'CellAgent', link: 'http://cell.agent4science.cn/start' }
+      { text: 'CellAgent', link: 'http://cell.agent4science.cn/start/' }
     ],
 
     sidebar: [
