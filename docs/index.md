@@ -305,7 +305,8 @@ sc.pl.umap(adata, color=['leiden'])
 ```
 </div>
 
-<span class="bg-grey-lighten-2"><img src="./user.png" alt="Expert" style="vertical-align: middle; margin-right: 8px;">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
+![An image](/user.png)
+<span class="bg-grey-lighten-2">"Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate..."
 </span>
 <div>
 
@@ -366,8 +367,7 @@ GPT-4 provided code for a basic solution.
             <v-expansion-panel title="Thought and code generation">
               <v-expansion-panel-text>
                 <span class="bg-light-green-lighten-2">
-                  CellAgent is starting the process. Please wait for a while.<br>
-                  ... [the process of task decomposition and the execution of previous steps]<br>
+                  This is raw PBMC dataset. Please help me complete cell type annotation.<br>
                 </span>
 <div>
 
