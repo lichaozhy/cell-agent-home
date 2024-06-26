@@ -135,7 +135,7 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
           <chat-bubble>
             <template v-slot:subject><v-img src="/user.png" /></template>
             <span class="bg-grey-lighten-2">
-              Great, help me complete the cell type annotation finally.
+              "Great, help me complete the cell type annotation finally."
             </span>
           </chat-bubble>
           <chat-bubble>
