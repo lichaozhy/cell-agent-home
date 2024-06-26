@@ -56,7 +56,7 @@ sc.pl.umap(adata, color=['leiden'])
 
   <span class="bg-grey-lighten-2">
     "Based on the current data analysis results, and in biomedical research, these genes can typically serve as markers to help us identify different cell types..."
-  </span>
+  </span><br><br><br>
 <!-- </chat-bubble> -->
 <chat-bubble>
 <div>
