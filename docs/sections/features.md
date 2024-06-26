@@ -97,7 +97,6 @@ Here is the complete code to perform cell type annotation using the `AnnotatorCe
 from tools.annotator_celltypist import AnnotatorCelltypist
 
 annotator = AnnotatorCelltypist()
-
 adata = annotator.run(model_name='Immune_All_Low.pkl', adata=adata, obs_cluster='leiden')
 
 print("Cell type annotation complete. The annotated cell types are stored in adata.obs['cell_typist_label'].")
@@ -136,20 +135,13 @@ Please continue to generate code and natural language explanations to better mee
 To meet the user's requirements, we will set the `npca` parameter to 30 for the PCA and then perform Louvain clustering. We will visualize the clustering results using UMAP. Here is the code to complete the current step:
 
 ```python
-...
-
 # Perform PCA with npca=30
 sc.tl.pca(adata, svd_solver='arpack', n_comps=30)
-
 sc.pl.pca_variance_ratio(adata, log=True)
-
 sc.pp.neighbors(adata, n_neighbors=10, n_pcs=30)
-
 sc.tl.umap(adata)
-
 # Perform Louvain clustering
 sc.tl.louvain(adata)
-
 # Visualize the UMAP with Louvain clustering results
 sc.pl.umap(adata, color=['louvain'])
 ...
@@ -161,8 +153,8 @@ Explanation:
 ...
 
 
-<img src="/output1.png" alt="" style="height: 200px;">
-<img src="/output2.png" alt="" style="height: 200px;">
+<img src="/output1.png" alt="" style="height: 180px;">
+<img src="/output2.png" alt="" style="height: 180px;">
 
 </div>
       </template>
