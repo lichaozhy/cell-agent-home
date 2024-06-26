@@ -24,6 +24,7 @@
       >
         <v-card-text>
         <chat-bubble>
+            <template v-slot:subject><v-img src="/user.png" /></template>
 <div>
 
 ```python
@@ -59,6 +60,7 @@ sc.pl.umap(adata, color=['leiden'])
   </span><br><br>
 <!-- </chat-bubble> -->
 <chat-bubble>
+            <template v-slot:subject><v-img src="/user.png" /></template>
 <div>
 
 ```python
