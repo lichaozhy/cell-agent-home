@@ -1,6 +1,6 @@
 ## By coordinating several LLM-driven biological experts, CellAgent automatically conducts step-by-step execution and iterative optimization for various tasks, substantially reducing the workload for science data analyses, bringing us into the “Agent for Science” era.
 
-<div class="mb-2"></div>
+<div class="mb-4"></div>
 
 <v-tabs class="border-b-sm" fixed-tabs v-model="tab">
   <v-tab text="Task decomposition" value="0"></v-tab>

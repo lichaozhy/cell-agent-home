@@ -1,6 +1,6 @@
 ## CellAgent surpasses traditional analysing process in its advanced automation capabilities on single-cell data.
 
-<div class="mb-2"></div>
+<div class="mb-4"></div>
 
 <v-container class="mb-16 py-0 px-0">
   <v-row>

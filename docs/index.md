@@ -43,19 +43,19 @@ onMounted(async function assertInCN() {
 
 <!--@include: ./sections/banner.md-->
 
-<div class="mt-16"></div>
+<div class="mt-20"></div>
 
 <!--@include: ./sections/features.md-->
 
-<div class="mt-16"></div>
+<div class="mt-20"></div>
 
 <!--@include: ./sections/examples.md-->
 
-<div class="mt-16"></div>
+<div class="mt-20"></div>
 
 <!--@include: ./sections/comparation.md-->
 
-<div class="mt-16"></div>
+<div class="mt-20"></div>
 
 CellAgent can streamline your single-cell data analysis workflow, allowing you to obtain high-quality results without the need for complex coding. Whether you are a domain expert or a novice, our online platform enables effortless data analysing and interpretation. With CellAgent, you can:
 

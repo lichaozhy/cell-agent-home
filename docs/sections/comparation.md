@@ -1,6 +1,6 @@
 ## CellAgent consistently adapts appropriate tools and hyperparameters to achieve superior outcomes.
 
-<div class="mb-2"></div>
+<div class="mb-4"></div>
 
 <v-container class="py-0 px-8">
   <v-row>
