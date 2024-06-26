@@ -61,7 +61,7 @@ The current step is: Dimensionality Reduction. Generate code to complete the cur
       </template>
       <template v-slot:output>
 <div>
-To perform dimensionality reduction, we will use Principal Component Analysis (PCA) to reduce the dimensionality of the dataset. This step is crucial for visualizing the data and for subsequent steps like clustering and trajectory inference. Here is the code to perform PCA and visualize the results
+To perform dimensionality reduction, we will use Principal Component Analysis (PCA) to reduce the dimensionality of the dataset. This step is crucial for visualizing the data and for subsequent steps like clustering and trajectory inference. Here is the code:
 
 ```python
 sc.tl.pca(adata, svd_solver='arpack')
@@ -121,8 +121,7 @@ This code initializes the `AnnotatorCelltypist` tool, runs the annotation proces
       </template>
       <template v-slot:thought>
 <div>
-The current step is: Dimensionality Reduction. In this step, CellAgent executed the code `sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)` to compute the neighborhood graph.
-
+The current step is: Dimensionality Reduction. In this step, CellAgent executed the code `sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)` to compute the neighborhood graph.<br>
 The user has provided new feedback for this step: Set the npca parameter to 30 and display the Louvain clustering results. Please continue to generate code and natural language explanations to better meet the user's needs.
 </div>
       </template>
@@ -136,9 +135,8 @@ sc.tl.pca(adata, svd_solver='arpack', n_comps=30)
 sc.pl.pca_variance_ratio(adata, log=True)
 sc.pp.neighbors(adata, n_neighbors=10, n_pcs=30)
 sc.tl.umap(adata)
-# Perform Louvain clustering
+
 sc.tl.louvain(adata)
-# Visualize the UMAP with Louvain clustering results
 sc.pl.umap(adata, color=['louvain'])
 ...
 ```
