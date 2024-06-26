@@ -128,8 +128,8 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
             </span>
           </chat-bubble>
           <!-- <chat-bubble> -->
-            <span class="bg-light-green-lighten-2">
-              <br><br>...<br><br>
+            <span>
+              ...<br><br>
             </span>
           <!-- </chat-bubble> -->
           <chat-bubble>
