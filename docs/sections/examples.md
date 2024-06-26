@@ -55,7 +55,7 @@ sc.pl.umap(adata, color=['leiden'])
   <img src="/teacher.png" alt="" style="height: 25px; display: inline-block; ">
 
   <span class="bg-grey-lighten-2">
-    "Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate."
+    "Based on the current data analysis results, and in biomedical research, these genes can typically serve as markers to help us identify different cell types..."
   </span>
 <!-- </chat-bubble> -->
 <chat-bubble>
