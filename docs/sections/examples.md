@@ -12,9 +12,9 @@
         class="rounded-0"
       >
         <v-card-text>
-● Require programming skills to manually process single-cell data✏️.<br>
-● Based on expert knowledge🗃️ to identify differentially expressed genes and annotate cell types.<br>
-● Different tools and hyperparameters depending on the specific dataset📐.<br>
+● Require programming skills.<br>
+● Require biological expertise.<br>
+● Adjust hyperparameters manually.<br>
         </v-card-text>
       </v-card>
       <v-card
@@ -95,9 +95,9 @@ sc.pl.umap(adata, color=['cell_type'])
         class="rounded-0 text-success"
       >
         <v-card-text>
-● Perform various single-cell data analyses through dialogue🗨, completely code-free.<br>
-● Multi-Agent architecture, leveraging collaboration among multiple experts👨‍👦‍👦 to accomplish data analysis tasks.<br>
-● Self-iterative evaluation effectively enhances the quality of data analysis⚖︎.<br>
+● Code less, dialogue only.<br>
+● Collaborate with LLM biological experts.<br>
+● Optimize result automatically.<br>
         </v-card-text>
       </v-card>
       <v-card
