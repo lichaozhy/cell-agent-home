@@ -5,16 +5,16 @@
 <v-container class="mb-16 py-0 px-0">
   <v-row>
     <v-col cols="6">
-      <div class="mb-2 text-h5">Traditional Method</div>
+      <div class="mb-2 text-h5">Traditional scRNA-seq analysis</div>
       <v-card
         border="surface-variant sm opacity-50"
         variant="text"
         class="rounded-0"
       >
         <v-card-text>
-1. Researchers are required to have programming skills ⌨️<br>
-2. Expert knowledge and searches of relevant literature databases 📚<br>
-3. Alternatively, use automated annotation tools 📐<br>
+● Require programming skills to manually process single-cell data✏️.<br>
+● Based on expert knowledge🗃️ to identify differentially expressed genes and annotate cell types.<br>
+● Different tools and hyperparameters depending on the specific dataset📐.<br>
         </v-card-text>
       </v-card>
       <v-card
@@ -55,6 +55,8 @@ sc.pl.umap(adata, color=['leiden'])
   <span class="bg-grey-lighten-2">
     "Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate."
   </span>
+</chat-bubble>
+<chat-bubble>
 <div>
 
 ```python
