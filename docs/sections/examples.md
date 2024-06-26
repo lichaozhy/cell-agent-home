@@ -127,11 +127,11 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
               "Please using the Leiden algorithm to cluster."
             </span>
           </chat-bubble>
-          <chat-bubble>
+          <!-- <chat-bubble> -->
             <span class="bg-light-green-lighten-2">
-              ...
+              <br><br>...<br><br>
             </span>
-          </chat-bubble>
+          <!-- </chat-bubble> -->
           <chat-bubble>
             <template v-slot:subject><v-img src="/user.png" /></template>
             <span class="bg-grey-lighten-2">
