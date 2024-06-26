@@ -50,14 +50,14 @@ sc.pl.umap(adata, color=['leiden'])
 </div>
         </chat-bubble>
 
-<chat-bubble>
+<!-- <chat-bubble> -->
   <!-- <template v-slot:subject><v-img src="/teacher.png" /></template> -->
-  <img src="/teacher.png" alt="" style="height: 20px; display: inline-block;">
+  <img src="/teacher.png" alt="" style="height: 25px; display: inline-block; ">
 
   <span class="bg-grey-lighten-2">
     "Based on current single-cell RNA sequencing research and literature data, we can use the following marker genes to annotate."
   </span>
-</chat-bubble>
+<!-- </chat-bubble> -->
 <chat-bubble>
 <div>
 
