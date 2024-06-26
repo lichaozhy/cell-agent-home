@@ -1,7 +1,7 @@
 <template>
   <v-sheet class="mt-10 mb-8 position-relative" border="sm" rounded>
     <v-avatar
-      size="33"
+      size="28"
       class="chat-bubble-subject position-absolute"
     >
       <slot name="subject">
