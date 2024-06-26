@@ -121,13 +121,9 @@ This code initializes the `AnnotatorCelltypist` tool, runs the annotation proces
       </template>
       <template v-slot:thought>
 <div>
-The current step is: Dimensionality Reduction.
+The current step is: Dimensionality Reduction. In this step, CellAgent executed the code `sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)` to compute the neighborhood graph.
 
-In this step, CellAgent executed the code `sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)` to compute the neighborhood graph.
-
-The current step has been completed, and the user has provided new feedback: Set the npca parameter to 30 and display the Louvain clustering results.
-
-Please continue to generate code and natural language explanations to better meet the user's needs.
+The user has provided new feedback for this step: Set the npca parameter to 30 and display the Louvain clustering results. Please continue to generate code and natural language explanations to better meet the user's needs.
 </div>
       </template>
       <template v-slot:output>
@@ -153,8 +149,8 @@ Explanation:
 ...
 
 
-<img src="/output1.png" alt="" style="height: 180px;">
-<img src="/output2.png" alt="" style="height: 180px;">
+<img src="/output1.png" alt="" style="height: 180px; display: inline-block;">
+<img src="/output2.png" alt="" style="height: 180px; display: inline-block;">
 
 </div>
       </template>
