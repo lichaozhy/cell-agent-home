@@ -100,6 +100,7 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
       >
         <v-card-text>
           <chat-bubble>
+            <template v-slot:subject><v-img src="/user.png" /></template>
             <span class="bg-grey-lighten-2">
               "This is raw PBMC dataset. Please help me complete cell type annotation."<br>
             </span>
@@ -119,17 +120,18 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
             </span>
           </chat-bubble>
           <chat-bubble>
+            <template v-slot:subject><v-img src="/user.png" /></template>
             <span class="bg-grey-lighten-2">
               "Please using the Leiden algorithm to cluster."
             </span>
           </chat-bubble>
           <chat-bubble>
-            <template v-slot:subject><v-img src="/logo.png" /></template>
             <span class="bg-light-green-lighten-2">
               ...
             </span>
           </chat-bubble>
           <chat-bubble>
+            <template v-slot:subject><v-img src="/user.png" /></template>
             <span class="bg-grey-lighten-2">
               Great, help me complete the cell type annotation finally.
             </span>
