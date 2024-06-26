@@ -95,9 +95,9 @@ sc.pl.umap(adata, color=['cell_type'])
         class="rounded-0 text-success"
       >
         <v-card-text>
-1. xx<br>
-2. xx<br>
-3. xx<br>
+● Perform various single-cell data analyses through dialogue🗨, completely code-free.<br>
+● Multi-Agent architecture, leveraging collaboration among multiple experts👨‍👦‍👦 to accomplish data analysis tasks.<br>
+● Self-iterative evaluation effectively enhances the quality of data analysis⚖︎.<br>
         </v-card-text>
       </v-card>
       <v-card
@@ -108,7 +108,7 @@ sc.pl.umap(adata, color=['cell_type'])
         <v-card-text>
           <chat-bubble>
             <span class="bg-grey-lighten-2">
-              This is raw PBMC dataset. Please help me complete cell type annotation.<br>
+              "This is raw PBMC dataset. Please help me complete cell type annotation."<br>
             </span>
           </chat-bubble>
           <chat-bubble>
@@ -119,8 +119,7 @@ sc.pl.umap(adata, color=['cell_type'])
               2. Normalization<br>
               3. Identification of Highly<br>
               4. Dimensionality Reduction<br>
-              5. Clustering<br>
-              6. Clustering<br>
+              5. Clustering<br><br>
             </span>
             <span class="bg-light-green-lighten-2">
               ...
@@ -128,18 +127,14 @@ sc.pl.umap(adata, color=['cell_type'])
           </chat-bubble>
           <chat-bubble>
             <span class="bg-grey-lighten-2">
-              Please using the Leiden algorithm to cluster.
+              "Please using the Leiden algorithm to cluster."
             </span>
           </chat-bubble>
           <chat-bubble>
             <template v-slot:subject><v-img src="/logo.png" /></template>
             <span class="bg-light-green-lighten-2">
-              I will first compute the neighborhood graph and then apply the Leiden algorithm to identify clusters. Finally, visualize the clustering results using UMAP.
+              ...
             </span>
-<div>
-
-![An image](/cellexample1.png)
-</div>
           </chat-bubble>
           <chat-bubble>
             <span class="bg-grey-lighten-2">
