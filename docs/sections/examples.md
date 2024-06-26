@@ -57,7 +57,7 @@ sc.pl.umap(adata, color=['leiden'])
 
   <span class="bg-grey-lighten-2">
     "Based on the current data analysis results, and in biomedical research, these genes can typically serve as markers to help us identify different cell types..."
-  </span><br><br>
+  </span><br>
 <!-- </chat-bubble> -->
 <chat-bubble>
             <template v-slot:subject><v-img src="/user.png" /></template>
@@ -76,7 +76,7 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
 ```
 </div>
   <span class="bg-grey-lighten-2">
-    "📄 Finally，we get the annotation result."
+    📄 "Finally，we get the annotation result."
   </span>
 </chat-bubble>
         </v-card-text>
@@ -110,7 +110,7 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
           <chat-bubble>
             <template v-slot:subject><v-img src="/logo.png" /></template>
             <span class="bg-light-green-lighten-2">
-              After an initial anlysis, 6 steps are required to complete your request:<br>
+              After an initial anlysis, 6 steps are required to complete your request:<br><br>
               1.Quality Control<br>
               2. Normalization<br>
               3. Identification of Highly<br>
@@ -141,11 +141,11 @@ adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
           <chat-bubble>
             <template v-slot:subject><v-img src="/logo.png" /></template>
             <span class="bg-light-green-lighten-2">
-              Combining differential gene expression across clusters and results from cell type annotation tools like Celltypist, the cell labels for these clusters were finally confirmed and saved as `.obs['final_type']` after evaluation.
+              Combining differential gene expression across clusters and results from cell type annotation tools like Celltypist, the cell labels for these clusters were finally confirmed and saved as `.obs['final_type']` after evaluation.<br><br>
             </span>
 <div>
 
-<img src="/cellexample2.png" alt="" style="height: 180px; display: inline-block;">
+<img src="/cellexample2.png" alt="" style="height: 200px; display: inline-block;"><br>
 </div>
           </chat-bubble>
         </v-card-text>
