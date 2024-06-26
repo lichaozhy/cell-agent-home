@@ -27,21 +27,21 @@
 <div>
 
 ```python
-import scanpy as sc
-import pandas as pd
-adata = sc.datasets.pbmc3k()
-print(adata)
+# Filter based on the properties of current dataset and empirical thresholds
 sc.pp.filter_cells(adata, min_genes=200)
 sc.pp.filter_genes(adata, min_cells=3)
 adata.var['mt'] = adata.var_names.str.startswith('MT-')
+# Calculate quality control metrics
 sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], percent_top=None, log1p=False, inplace=True)
+
+# Filter cells with less than 2500 genes and mitochondrial gene percentage less than 5%
 adata = adata[adata.obs.n_genes_by_counts < 2500, :]
 adata = adata[adata.obs.pct_counts_mt < 5, :]
-sc.pp.normalize_total(adata, target_sum=1e4)
-sc.pp.log1p(adata)
-sc.pp.highly_variable_genes(adata, min_mean=0.0125, max_mean=3, min_disp=0.5)
-adata = adata[:, adata.var.highly_variable]
+
+# Other steps omitted
+
 sc.tl.pca(adata, svd_solver='arpack')
+# For this dataset, n_neighbors=10 and n_pcs=40 show clear results
 sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
 sc.tl.leiden(adata)
 sc.tl.umap(adata)
@@ -60,24 +60,15 @@ sc.pl.umap(adata, color=['leiden'])
 <div>
 
 ```python
-marker_genes = {
-    'T_cells': ['IL7R', 'CD3D'],
-    'B_cells': ['CD79A', 'MS4A1'],
-    'NK_cells': ['GNLY', 'NKG7'],
-    'Monocytes': ['LYZ', 'CD14'],
-    'Dendritic_cells': ['FCER1A', 'CST3'],
-    'Megakaryocytes': ['PPBP']
+# Find differentially expressed genes for each cluster
+sc.tl.rank_genes_groups(adata, 'leiden', method='t-test')
+sc.pl.rank_genes_groups(adata, n_genes=20, sharey=False)
+
+#After comparing the differentially expressed genes in each cluster, and under the guidance of experts, cell type labels were assigned to each cluster.
+cluster_annotations = {
+    '0': 'T cells','1': 'B cells','2': 'NK cells','3': 'Monocytes','4': 'Dendritic cells'...
 }
-
-sc.tl.score_genes_cell_cycle(adata, s_genes=marker_genes['T_cells'], g2m_genes=marker_genes['B_cells'])
-sc.pl.umap(adata, color=['CD3D', 'CD79A', 'GNLY', 'LYZ', 'FCER1A', 'PPBP'])
-
-adata.obs['cell_type'] = adata.obs['leiden'].astype(str)
-
-for cell_type, genes in marker_genes.items():
-    adata.obs.loc[adata[:, genes].X.mean(1) > 0.5, 'cell_type'] = cell_type
-
-sc.pl.umap(adata, color=['cell_type'])
+adata.obs['cell_type'] = adata.obs['leiden'].map(cluster_annotations)
 ```
 </div>
   <span class="bg-grey-lighten-2">
