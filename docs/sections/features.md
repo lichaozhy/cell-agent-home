@@ -73,7 +73,7 @@ sc.pl.pca(adata, color='total_counts', show=True, save=False)
 
 ```
 
-<img src="/image_2.png" alt="" style="height: 200px;">
+<img src="/image_2.png" alt="" style="height: 182px;">
 </div>
       </template>
     </demo-frame>
@@ -130,7 +130,7 @@ The user has provided new feedback for this step: Set the npca parameter to 30 a
 To meet the user's requirements, we will set the `npca` parameter to 30 for the PCA and then perform Louvain clustering. We will visualize the clustering results using UMAP. Here is the code to complete the current step:
 
 ```python
-# Perform PCA with npca=30
+
 sc.tl.pca(adata, svd_solver='arpack', n_comps=30)
 sc.pl.pca_variance_ratio(adata, log=True)
 sc.pp.neighbors(adata, n_neighbors=10, n_pcs=30)
@@ -141,7 +141,6 @@ sc.pl.umap(adata, color=['louvain'])
 ...
 ```
 
-Explanation:
 1. **PCA with npca=30**: We perform PCA with the number of principal components set to 30.
 2. **Louvain Clustering**: We perform Louvain clustering to identify clusters in the data.
 ...
