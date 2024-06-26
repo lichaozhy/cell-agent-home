@@ -23,6 +23,6 @@ import { mdiAccount } from '@mdi/js'
 
 <style>
 .chat-bubble-subject {
-  top: -40px;
+  top: -32px;
 }
 </style>
