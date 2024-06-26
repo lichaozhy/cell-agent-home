@@ -148,7 +148,7 @@ sc.pl.umap(adata, color=['cell_type'])
             </span>
 <div>
 
-![An image](/cellexample2.png)
+<img src="/cellexample2.png" alt="" style="height: 180px; display: inline-block;">
 </div>
           </chat-bubble>
         </v-card-text>

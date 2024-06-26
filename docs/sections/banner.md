@@ -5,7 +5,7 @@
   <template v-if="isCN !== null">
     <iframe
       v-if="isCN"
-      src="//player.bilibili.com/player.html?isOutside=true&aid=112613522411165&bvid=BV1dVGoeCEQ4&cid=500001581492325&p=1"
+      src="//player.bilibili.com/player.html?isOutside=true&aid=112681956672810&bvid=BV14Z3MexEoy&cid=500001596752173&p=1&rel=0"
       scrolling="no"
       allowfullscreen="true"
       class="h-100 w-100 border-0"
@@ -13,7 +13,7 @@
     <iframe
       v-else
       class="h-100 w-100 border-0"
-      src="https://www.youtube.com/embed/7a4M3ymp5ng?si=Hp-jAv9KkYHy-4-w&rel=0"
+      src="https://www.youtube.com/embed/kJONeY-DDeE?si=Gl0P4QR2Avs9CocD&rel=0"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
