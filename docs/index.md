@@ -21,7 +21,6 @@ import { useTheme } from 'vuetify'
 
 const { isDark } = useData();
 const theme = useTheme()
-theme.global.name.value = 'dark'
 
 watch(isDark, value => {
   theme.global.name.value = value ? 'dark' : 'light'
