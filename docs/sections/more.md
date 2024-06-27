@@ -1,8 +1,8 @@
 ## More on CellAgent
+Not available currently.
+<!-- ### Research
 
-### Research
-
-CellAgent is publicly accessible on [BiorXiv](https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1). 
+CellAgent is publicly accessible on [BiorXiv](https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1).  -->
 
 <!-- ### Meet the team
 
@@ -12,13 +12,13 @@ CellAgent is publicly accessible on [BiorXiv](https://www.biorxiv.org/content/10
 - **Prof.** [Jianye Hao](https://github.com) Tianjin University
 </div> -->
 
-### Contact us
+<!-- ### Contact us
 
 If you have any suggestions or concerns during use, please feel free to contact
 the developer (email: TBD) or the corresponding authors (Professor Peng and
 Professor Hao). In your email, please specify the time the issue occurred and
 include your usage record of CellAgent (screenshots, etc.) to help us identify
-the problem. Thank you.
+the problem. Thank you. -->
 
 <v-sheet class="mt-8 d-flex align-center justify-center flex-wrap text-center mx-auto pa-16 bg-grey-darken-4" elevation="4" max-width="800" width="100%">
   <div class="text-h5 font-weight-medium mb-8">
