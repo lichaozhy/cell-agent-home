@@ -12,7 +12,7 @@ hero:
       link: http://cell.agent4science.cn/start/
     - theme: alt
       text: View CellAgent research >
-      link: https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1
+      link: #
 ---
 <script setup>
 import { watch, ref, onMounted } from 'vue';
@@ -40,7 +40,7 @@ onMounted(async function assertInCN() {
 
   return new Promise((resolve) => {
     img.onload = () => isCN.value = false;
-    img.onerror = () => isCN.value = true;
+    img.onerror = () => isCN.value = true;  
   })
 })
 </script>
