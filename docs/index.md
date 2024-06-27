@@ -29,6 +29,10 @@ watch(isDark, value => {
 const tab = ref('0')
 const isCN = ref(null)
 
+onMounted(async function setDark() {
+  isDark.value = true;
+})
+
 onMounted(async function assertInCN() {
   const img = new Image();
   
