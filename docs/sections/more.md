@@ -1,5 +1,5 @@
 ## More on CellAgent
-Not available currently.
+Considering the double-blind review principle, all external links on this page are hidden during the paper submission period, and this part of the description is temporarily invisible.
 <!-- ### Research
 
 CellAgent is publicly accessible on [BiorXiv](https://www.biorxiv.org/content/10.1101/2024.05.13.593861v1).  -->
